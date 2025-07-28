@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 _**Food Ordering System**_
 
 Welcome to the Food Ordering System repository! This project is a web-based solution developed with HTML, CSS, JavaScript, PHP, and MySQL via PHPMyAdmin. 
@@ -28,3 +29,6 @@ _**or**_
 * **Adjust the database connection settings in the PHP files to match your environment.**
 
 * **Open the project in a web server environment to start using the Food Ordering System.**
+=======
+# wtfinal_project
+>>>>>>> 709f92bd65d89e8e946bfec8cf42be741409e9ae
