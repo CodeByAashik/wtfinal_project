@@ -1,41 +1,125 @@
-<footer class="footer" style="background: linear-gradient(to right, #aafaa5, #8df593);">
 
-   <section class="grid">
 
-      <div class="box">
-         <img src="images/email-icon.png" alt="">
-         <h3>our email</h3>
-         <a href="mailto:outerclove@gmail.com">outerclove@gmail.com</a>
-      </div>
 
-      <div class="box">
-         <img src="images/clock-icon.png" alt="">
-         <h3>opening hours</h3>
-         <p>00:07am to 00:10pm</p>
-      </div>
 
-      <div class="box">
-         <img src="images/map-icon.png" alt="">
-         <h3>our address</h3>
-         <a href="#">Kurunegala, Sri Lanka - Bauddhaloka Road</a>
-         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.8479582324317!2d80.3576487!3d7.482035799999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae33a227cc88679%3A0x9b315d38cde4b45e!2sBauddhaloka%20Rd%2C%20Kurunegala!5e0!3m2!1sen!2slk!4v1704283880683!5m2!1sen!2slk" width="250" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
+<footer class="quickerr-footer">
+    <div class="footer-container">
+        <!-- Main Footer Content -->
+        <div class="footer-content">
+            <!-- Left Section with Logo/Image Placeholder -->
+            <div class="footer-left">
+                <div class="footer-logo">
+                    <!-- Image Placeholder -->
+                    <div class="logo-placeholder">
+                        <img src="images/logo.png" alt="Quickerr Logo" class="footer-logo-img">
+                    </div>
+                    <p class="footer-description">
+                        Fast, reliable food delivery at your fingertips. 
+                        Order from your favorite restaurants and get it delivered quickly.
+                    </p>
+                </div>
+            </div>
 
-      <div class="box">
-         <img src="images/phone-icon.png" alt="">
-         <h3>our number</h3>
-         <a href="tel:1234567890">123-456-7890</a>
-         <a href="tel:1112223333">111-222-3333</a>
-      </div>
+            <!-- Center Section - Quick Links -->
+            <div class="footer-center">
+                <div class="footer-links">
+                    <div class="link-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="/about">About Us</a></li>
+                            <li><a href="/careers">Careers</a></li>
+                            <li><a href="/blog">Blog</a></li>
+                            <li><a href="/contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="link-column">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="/restaurants">Restaurants</a></li>
+                            <li><a href="/delivery">Delivery</a></li>
+                            <li><a href="/catering">Catering</a></li>
+                            <li><a href="/gift-cards">Gift Cards</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="link-column">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="/help">Help Center</a></li>
+                            <li><a href="/track-order">Track Order</a></li>
+                            <li><a href="/refunds">Refunds</a></li>
+                            <li><a href="/safety">Safety</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-      
+            <!-- Right Section - Contact & App Links -->
+            <div class="footer-right">
+                <div class="contact-info">
+                    <h4>Get in Touch</h4>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> support@quickerr.com</p>
+                </div>
+                
+                <div class="app-download">
+                    <h4>Download Our App</h4>
+                    <div class="app-buttons">
+                        <a href="#" class="app-btn">
+                            <i class="fab fa-apple"></i> App Store
+                        </a>
+                        <a href="#" class="app-btn">
+                            <i class="fab fa-google-play"></i> Google Play
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-   </section>
-
-   <div class="credit">&copy; <?= date('Y'); ?> <span>The Outer Clove Restaurant</span></div>
-
+        <!-- Bottom Section with Social Media -->
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <div class="footer-legal">
+                    <p>&copy; <?php echo date('Y'); ?> Quickerr. All rights reserved.</p>
+                    <div class="legal-links">
+                        <a href="/privacy">Privacy Policy</a>
+                        <a href="/terms">Terms of Service</a>
+                        <a href="/cookies">Cookie Policy</a>
+                    </div>
+                </div>
+                
+                <!-- Social Media Icons -->
+                <div class="social-media">
+                    <a href="#" class="social-link" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 </footer>
+
 
 <div class="loader">
    <img src="images/loader.gif" alt="">
 </div>
+
+
+
+
+
+
+

@@ -51,7 +51,7 @@ section{
 }
    
 .heading h3{
-   font-size: 5rem;
+   font-size: 3.5rem;
    color:var(--white);
    text-transform: capitalize;
 }
@@ -145,98 +145,6 @@ section{
    gap:1rem;
 }
 
-.header{
-   position: sticky;
-   top:0; left:0; right:0;
-   z-index: 1000;
-   background-color: var(--white);
-   border-bottom: var(--border);
-}
-
-.header .flex{
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-   position: relative;
-}
-
-.header .flex .logo{
-   font-size: 2.5rem;
-   color:var(--black);
-}
-
-.header .flex .navbar a{
-   font-size: 2rem;
-   color:var(--black);
-   margin:0 1rem;
-}
-
-.header .flex .navbar a:hover{
-   color:var(--yellow);
-   text-decoration: underline;
-}
-
-.header .flex .icons > *{
-   margin-left: 1.5rem;
-   font-size: 2.5rem;
-   color:var(--black);
-   cursor: pointer;
-}
-
-.header .flex .icons > *:hover{
-   color: var(--yellow);
-}
-
-.header .flex .icons span{
-   font-size: 2rem;
-}
-
-#menu-btn{
-   display: none;
-}
-
-.header .flex .profile{
-   background-color: var(--white);
-   border:var(--border);
-   padding:1.5rem;
-   text-align: center;
-   position: absolute;
-   top:125%; right:2rem;
-   width: 30rem;
-   display: none;
-   animation: fadeIn .2s linear;
-}
-
-.header .flex .profile.active{
-   display: inline-block;
-}
-
-@keyframes fadeIn {
-   0%{
-      transform: translateY(1rem);
-   }
-}
-
-.header .flex .profile .name{
-   font-size: 2rem;
-   color:var(--black);
-   margin-bottom: .5rem;
-}
-
-.header .flex .profile .account{
-   margin-top: 1.5rem;
-   font-size: 2rem;
-   color:var(--light-color);
-}
-
-.header .flex .profile .account a{
-   color:var(--black);
-}
-
-.header .flex .profile .account a:hover{
-   color:var(--yellow);
-   text-decoration: underline;
-}
 
 .hero .slide{
    display: flex;
@@ -903,57 +811,6 @@ section{
    color:var(--white);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-.footer .grid{
-   display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
-   gap:1.5rem;
-   align-items: flex-start;
-}
-
-.footer .grid .box{
-   border:var(--border);
-   padding:2rem;
-   text-align: center;
-}
-
-.footer .grid .box img{
-   height: 10rem;
-   width: 100%;
-   object-fit: contain;
-   margin-bottom: .5rem;
-}
-
-.footer .grid .box h3{
-   margin:1rem 0;
-   font-size: 2rem;
-   color:var(--black);
-   text-transform: capitalize;
-}
-
-.footer .grid .box p,
-.footer .grid .box a{
-   display: block;
-   font-size: 1.7rem;
-   color:var(--light-color);
-   line-height: 1.8;
-}
-
-.footer .grid .box a:hover{
-   text-decoration: underline;
-}
-
 .credit{
    padding:3rem 2rem;
    text-align: center;
@@ -1060,3 +917,5 @@ section{
 }
 
 /*new styles*/
+
+

@@ -11,12 +11,12 @@ if(isset($message)){
 }
 ?>
 
-<header class="header" style="background: linear-gradient(to right, #aafaa5, #8df593);">
+<header class="header" >
 
    <section class="flex">
 
    <a href="home.php" class="logo">
-   <img src="images/LYgjKqzpQb.png" alt="Yum-Yum Logo" width="100" height="100"></a>
+   <img src="images/logo.png" alt="Yum-Yum Logo" height="50px"></a>
 
       <nav class="navbar">
          <a href="home.php">home</a>
@@ -24,7 +24,7 @@ if(isset($message)){
          <a href="menu.php">menu</a>
          <a href="orders.php">orders</a>
          <a href="contact.php">contact</a>
-         <a href="admin/admin_login.php">admin portal</a>
+         <a href="admin/admin_login.php">admin</a>
       </nav>
 
       <div class="icons">
