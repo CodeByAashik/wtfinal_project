@@ -20,10 +20,10 @@ if(isset($message)){
 
       <nav class="navbar">
          <a href="home.php">home</a>
-         <a href="about.php">about</a>
          <a href="menu.php">menu</a>
          <a href="orders.php">orders</a>
          <a href="contact.php">contact</a>
+         <a href="about.php">about</a>
          <a href="admin/admin_login.php">admin</a>
       </nav>
 

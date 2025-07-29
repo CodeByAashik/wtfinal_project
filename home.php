@@ -22,11 +22,11 @@ include 'components/add_cart.php';
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Quickerr</title>
 
-   <link rel="icon" href="images/LYgjKqzpQb.ico" type="image/x-icon">
+   <link rel="icon" href="images/logo.png" type="image/x-icon">
 
    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
 
-<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
@@ -39,6 +39,7 @@ include 'components/add_cart.php';
    <link rel="stylesheet" href="css/delivery-info.css">
    <link rel="stylesheet" href="css/hero.css">
    <link rel="stylesheet" href="css/category.css">
+   <link rel="stylesheet" href="css/hero-products.css">
 
    <style>
       .box-container {
@@ -183,7 +184,7 @@ include 'components/add_cart.php';
    </div>
 
    <div class="more-btn">
-      <a href="menu.php" class="btn">veiw all</a>
+      <a href="menu.php" class="btnv">veiw all</a>
    </div>
 
 </section>

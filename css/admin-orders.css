@@ -1,0 +1,124 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  color: #333;
+}
+
+/* Section Heading */
+.placed-orders .heading {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin: 30px 0;
+  color: #fff;
+  text-transform: capitalize;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  border-radius: 10px;
+  display: inline-block;
+  backdrop-filter: blur(4px);
+}
+
+/* Orders container */
+.placed-orders .box-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  padding: 10px;
+}
+
+/* Each order box */
+.placed-orders .box {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.placed-orders .box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Order text details */
+.placed-orders .box p {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  color: #444;
+}
+
+.placed-orders .box p span {
+  color: #ff6b35;
+  font-weight: 500;
+}
+
+/* Drop-down styling */
+.placed-orders select.drop-down {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 1rem;
+  margin-top: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fff;
+  outline: none;
+}
+
+/* Buttons container */
+.flex-btn {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+/* Button styles */
+.btn,
+.delete-btn {
+  display: inline-block;
+  padding: 8px 14px;
+  font-size: 1.5rem;
+  text-decoration: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  text-align: center;
+}
+
+.btn {
+  background: #ff6b35;
+  color: #fff;
+  border: none;
+}
+
+.btn:hover {
+  background: #e55a27;
+}
+
+.delete-btn {
+  background: #f44336;
+  color: #fff;
+}
+
+.delete-btn:hover {
+  background: #c0392b;
+}
+
+/* Empty message */
+.empty {
+  text-align: center;
+  font-size: 1.2rem;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  margin: 30px auto;
+  border-radius: 12px;
+  max-width: 400px;
+}

@@ -1,0 +1,415 @@
+
+   
+      :root {
+         --primary-color: #FF6B35;
+         --secondary-color: #F7931E;
+         --accent-color: #27AE60;
+         --dark-color: #2C3E50;
+         --light-gray: #F8F9FA;
+         --white: #FFFFFF;
+         --text-dark: #2C3E50;
+         --text-light: #6C757D;
+         --border-color: #E9ECEF;
+         --shadow: 0 10px 30px rgba(0,0,0,0.1);
+         --gradient: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+         --success-color: #27AE60;
+         --warning-color: #F39C12;
+         --danger-color: #E74C3C;
+      }
+
+      * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+      }
+
+      body {
+         font-family: 'Poppins', sans-serif;
+         background: var(--light-gray);
+         color: var(--text-dark);
+         line-height: 1.6;
+      }
+
+      /* Heading Section */
+      .heading {
+         background: var(--gradient);
+         color: var(--white);
+         padding: 3rem 0;
+         text-align: center;
+         position: relative;
+         margin-bottom: 3rem;
+      }
+
+      .heading::before {
+         content: '';
+         position: absolute;
+         bottom: 0;
+         left: 0;
+         right: 0;
+         height: 20px;
+         background: var(--light-gray);
+         border-radius: 20px 20px 0 0;
+      }
+
+      .heading h3 {
+         font-size: 3rem;
+         font-weight: 700;
+         margin-bottom: 1rem;
+         text-transform: uppercase;
+         letter-spacing: 2px;
+      }
+
+      .heading p {
+         font-size: 1.1rem;
+         opacity: 0.9;
+      }
+
+      .heading p a {
+         color: var(--white);
+         text-decoration: none;
+         transition: all 0.3s ease;
+      }
+
+      .heading p a:hover {
+         text-decoration: underline;
+      }
+
+      .heading span {
+         opacity: 0.7;
+      }
+
+      /* Checkout Section */
+      .checkout {
+         max-width: 1200px;
+         margin: 0 auto;
+         padding: 0 2rem 4rem;
+      }
+
+      .title {
+         text-align: center;
+         font-size: 2.5rem;
+         color: var(--dark-color);
+         margin-bottom: 3rem;
+         font-weight: 700;
+         position: relative;
+      }
+
+      .title::after {
+         content: '';
+         position: absolute;
+         bottom: -10px;
+         left: 50%;
+         transform: translateX(-50%);
+         width: 80px;
+         height: 4px;
+         background: var(--gradient);
+         border-radius: 2px;
+      }
+
+      /* Form Layout */
+      form {
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         gap: 3rem;
+         align-items: start;
+      }
+
+      /* Cart Items Section */
+      .cart-items {
+         background: var(--white);
+         border-radius: 20px;
+         padding: 2.5rem;
+         box-shadow: var(--shadow);
+         border: 1px solid var(--border-color);
+         position: relative;
+      }
+      .cart-items h3 {
+         font-size: 1.8rem;
+         color: var(--dark-color);
+         margin-bottom: 2rem;
+         font-weight: 600;
+         display: flex;
+         align-items: center;
+         gap: 0.5rem;
+      }
+
+      .cart-items h3::before {
+         content: '\f07a';
+         font-family: 'Font Awesome 6 Free';
+         font-weight: 900;
+         color: var(--primary-color);
+         font-size: 1.5rem;
+      }
+
+      .cart-items p {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         padding: 1rem 0;
+         border-bottom: 1px solid var(--border-color);
+         font-size: 1rem;
+      }
+
+      .cart-items p:last-of-type {
+         border-bottom: none;
+      }
+
+      .cart-items .name {
+         font-weight: 500;
+         color: var(--text-dark);
+         flex: 1;
+      }
+
+      .cart-items .price {
+         font-weight: 600;
+         color: var(--primary-color);
+         font-size: 1.1rem;
+      }
+
+      .cart-items .grand-total {
+         background: linear-gradient(135deg, rgba(255,107,53,0.1) 0%, rgba(247,147,30,0.1) 100%);
+         padding: 1.5rem !important;
+         border-radius: 10px;
+         /* border: 2px solid var(--primary-color); */
+         margin-top: 1rem;
+      }
+
+      .cart-items .grand-total .name {
+         font-size: 1.2rem;
+         font-weight: 700;
+         color: var(--dark-color);
+         text-transform: uppercase;
+         letter-spacing: 1px;
+      }
+
+      .cart-items .grand-total .price {
+         font-size: 1.5rem;
+         font-weight: 800;
+         color: var(--primary-color);
+      }
+
+      .empty {
+         text-align: center;
+         color: var(--text-light);
+         font-style: italic;
+         padding: 2rem;
+         background: var(--light-gray);
+         border-radius: 10px;
+         border: 2px dashed var(--border-color);
+      }
+
+      /* User Info Section */
+      .user-info {
+         background: var(--white);
+         border-radius: 20px;
+         padding: 2.5rem;
+         box-shadow: var(--shadow);
+         border: 1px solid var(--border-color);
+         position: relative;
+         overflow: hidden;
+      }
+
+      .user-info h3 {
+         font-size: 1.8rem;
+         color: var(--dark-color);
+         margin-bottom: 1.5rem;
+         font-weight: 600;
+         display: flex;
+         align-items: center;
+         gap: 0.5rem;
+      }
+
+      .user-info h3:first-of-type::before {
+         content: '\f007';
+         font-family: 'Font Awesome 6 Free';
+         font-weight: 900;
+         color: var(--primary-color);
+         font-size: 1.5rem;
+      }
+
+      .user-info h3:last-of-type::before {
+         content: '\f3c5';
+         font-family: 'Font Awesome 6 Free';
+         font-weight: 900;
+         color: var(--primary-color);
+         font-size: 1.5rem;
+      }
+
+      .user-info > p {
+         display: flex;
+         align-items: center;
+         gap: 1rem;
+         padding: 1rem;
+         background: var(--light-gray);
+         border-radius: 10px;
+         margin-bottom: 1rem;
+         font-size: 1rem;
+      }
+
+      .user-info i {
+         color: var(--primary-color);
+         font-size: 1.2rem;
+         width: 20px;
+         text-align: center;
+      }
+
+      .user-info span {
+         font-weight: 500;
+         color: var(--text-dark);
+      }
+
+      /* Buttons */
+      .btn {
+         display: inline-block;
+         background: var(--gradient);
+         color: var(--white);
+         padding: 0.8rem 2rem;
+         border: none;
+         border-radius: 50px;
+         font-size: 1rem;
+         font-weight: 600;
+         text-decoration: none;
+         text-align: center;
+         cursor: pointer;
+         transition: all 0.3s ease;
+         text-transform: uppercase;
+         letter-spacing: 1px;
+         box-shadow: 0 4px 15px rgba(255,107,53,0.3);
+         margin: 0.5rem 0;
+      }
+
+      .btn:hover {
+         transform: translateY(-2px);
+         box-shadow: 0 8px 25px rgba(255,107,53,0.4);
+         background: linear-gradient(135deg, #F7931E 0%, #FF6B35 100%);
+      }
+
+      .btn.disabled {
+         background: var(--text-light);
+         cursor: not-allowed;
+         box-shadow: none;
+      }
+
+      .btn.disabled:hover {
+         transform: none;
+         box-shadow: none;
+      }
+
+      /* Select and Input Styling */
+      .box {
+         width: 100%;
+         padding: 1rem 1.5rem;
+         border: 2px solid var(--border-color);
+         border-radius: 10px;
+         font-size: 1rem;
+         font-family: 'Poppins', sans-serif;
+         background: var(--white);
+         color: var(--text-dark);
+         transition: all 0.3s ease;
+         margin: 1rem 0;
+      }
+
+      .box:focus {
+         outline: none;
+         border-color: var(--primary-color);
+         box-shadow: 0 0 0 3px rgba(255,107,53,0.1);
+      }
+
+      /* Payment Section Styling */
+      .user-info select {
+         background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+         background-position: right 0.5rem center;
+         background-repeat: no-repeat;
+         background-size: 1.5em 1.5em;
+         padding-right: 2.5rem;
+         appearance: none;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+         form {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+         }
+
+         .checkout {
+            padding: 0 1rem 4rem;
+         }
+
+         .heading h3 {
+            font-size: 2rem;
+         }
+
+         .title {
+            font-size: 2rem;
+         }
+
+         .cart-items,
+         .user-info {
+            padding: 1.5rem;
+         }
+
+         .cart-items h3,
+         .user-info h3 {
+            font-size: 1.5rem;
+         }
+      }
+
+      @media (max-width: 480px) {
+         .heading {
+            padding: 2rem 0;
+         }
+
+         .heading h3 {
+            font-size: 1.8rem;
+         }
+
+         .cart-items,
+         .user-info {
+            padding: 1rem;
+         }
+
+         .btn {
+            padding: 0.7rem 1.5rem;
+            font-size: 0.9rem;
+         }
+      }
+
+      /* Animation for page load */
+      @keyframes fadeInUp {
+         from {
+            opacity: 0;
+            transform: translateY(30px);
+         }
+         to {
+            opacity: 1;
+            transform: translateY(0);
+         }
+      }
+
+      .cart-items,
+      .user-info {
+         animation: fadeInUp 0.6s ease-out;
+      }
+
+      .user-info {
+         animation-delay: 0.2s;
+      }
+
+      /* Success/Error Message Styling */
+      .message {
+         background: var(--success-color);
+         color: var(--white);
+         padding: 1rem 2rem;
+         border-radius: 10px;
+         margin-bottom: 2rem;
+         text-align: center;
+         font-weight: 500;
+         box-shadow: 0 4px 15px rgba(39,174,96,0.3);
+      }
+
+      .error {
+         background: var(--danger-color);
+         box-shadow: 0 4px 15px rgba(231,76,60,0.3);
+      }
+   

@@ -1,0 +1,100 @@
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    color: #333;
+}
+
+/* Dashboard section */
+.dashboard {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(5px);
+}
+
+.dashboard .heading {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #222;
+    text-transform: capitalize;
+}
+
+/* Grid layout for boxes */
+.dashboard .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+/* Each box styling */
+.dashboard .box {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.dashboard .box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading inside box */
+.dashboard .box h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.dashboard .box p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Button styling */
+.dashboard .btna {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 16px;
+    background: #ff6b35;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+}
+
+.dashboard .btna:hover {
+    background: #e55a27;
+}
+
+/* Special style for the first welcome box */
+.dashboard .box:first-child {
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    color: #fff;
+}
+
+.dashboard .box:first-child h3,
+.dashboard .box:first-child p {
+    color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .dashboard .heading {
+        font-size: 1.8rem;
+    }
+}

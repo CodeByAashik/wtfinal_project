@@ -164,3 +164,60 @@
         font-size: 14px;
         color: #FC8A06;
     }
+
+
+    @media (max-width: 992px) {
+    .crbottom {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #cr-title {
+        font-size: 24px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .crtop {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    #cr-title {
+        padding-left: 0;
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    .cr-top-left {
+        padding-right: 0;
+    }
+
+    .crbottom {
+        grid-template-columns: 1fr;
+        width: 95%;
+    }
+
+    .cr-card {
+        padding: 20px;
+    }
+
+    .crc-t-l img {
+        height: 45px;
+        width: 45px;
+    }
+
+    .reviews {
+        width: 90%;
+        font-size: 13px;
+    }
+}
+
+
+
+
+
+
+

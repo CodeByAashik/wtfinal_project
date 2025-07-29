@@ -44,16 +44,20 @@ $grand_total = 0;
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Cart</title>
+   <title>Shopping Cart - Quickerr</title>
    <link rel="icon" href="images/LYgjKqzpQb.ico" type="image/x-icon">
 
    <!-- font awesome cdn link  -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <!-- Google Fonts -->
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
    <!-- custom css file link  -->
-   <link rel="stylesheet" href="css/style.css">
+   <!-- <link rel="stylesheet" href="css/style.css"> -->
    <link rel="stylesheet" href="css/footer.css">
    <link rel="stylesheet" href="css/header.css">
+   <link rel="stylesheet" href="css/cart.css">
+
 
 </head>
 <body>
@@ -63,7 +67,7 @@ $grand_total = 0;
 <!-- header section ends -->
 
 <div class="heading">
-   <h3>shopping cart</h3>
+   <h3>Shopping Cart</h3>
    <p><a href="home.php">home</a> <span> / cart</span></p>
 </div>
 
@@ -71,7 +75,7 @@ $grand_total = 0;
 
 <section class="products">
 
-   <h1 class="title">your cart</h1>
+   <h1 class="title">Your Cart Items</h1>
 
    <div class="box-container">
 
@@ -99,50 +103,113 @@ $grand_total = 0;
                $grand_total += $sub_total;
             }
          }else{
-            echo '<p class="empty">your cart is empty</p>';
+            echo '<p class="empty">Your cart is empty! Start adding some delicious items to get started.</p>';
          }
       ?>
 
    </div>
 
    <div class="cart-total">
-      <p>cart total : <span>$<?= $grand_total; ?></span></p>
-      <a href="checkout.php" class="btn <?= ($grand_total > 1)?'':'disabled'; ?>">proceed to checkout</a>
+      <p>🛒 Cart Total : <span>$<?= $grand_total; ?></span></p>
+      <a href="checkout.php" class="btn <?= ($grand_total > 1)?'':'disabled'; ?>">🚀 Proceed to Checkout</a>
    </div>
 
    <div class="more-btn">
       <form action="" method="post">
-         <button type="submit" class="delete-btn <?= ($grand_total > 1)?'':'disabled'; ?>" name="delete_all" onclick="return confirm('delete all from cart?');">delete all</button>
+         <button type="submit" class="delete-btn <?= ($grand_total > 1)?'':'disabled'; ?>" name="delete_all" onclick="return confirm('delete all from cart?');">🗑️ Clear Cart</button>
       </form>
-      <a href="menu.php" class="btn">continue shopping</a>
+      <a href="menu.php" class="btn">🍽️ Continue Shopping</a>
    </div>
 
 </section>
 
 <!-- shopping cart section ends -->
 
-
-
-
-
-
-
-
-
-
 <!-- footer section starts  -->
 <?php include 'components/footer.php'; ?>
 <!-- footer section ends -->
 
-
-
-
-
-
-
-
 <!-- custom js file link  -->
 <script src="js/script.js"></script>
+
+<script>
+   // Add smooth animations and interactions
+   document.addEventListener('DOMContentLoaded', function() {
+      // Animate cart items on load
+      const cartItems = document.querySelectorAll('.box');
+      cartItems.forEach((item, index) => {
+         item.style.animationDelay = `${index * 0.1}s`;
+      });
+
+      // Add quantity change animation
+      const qtyInputs = document.querySelectorAll('.qty');
+      qtyInputs.forEach(input => {
+         input.addEventListener('change', function() {
+            this.style.transform = 'scale(1.1)';
+            setTimeout(() => {
+               this.style.transform = 'scale(1)';
+            }, 200);
+         });
+      });
+
+      // Add loading state to update buttons
+      const updateBtns = document.querySelectorAll('.fa-edit');
+      updateBtns.forEach(btn => {
+         btn.addEventListener('click', function() {
+            const originalContent = this.innerHTML;
+            this.innerHTML = '<div class="loading"></div>';
+            
+            setTimeout(() => {
+               this.innerHTML = originalContent;
+            }, 1000);
+         });
+      });
+
+      // Add hover effects to action buttons
+      const actionBtns = document.querySelectorAll('.fa-eye, .fa-times');
+      actionBtns.forEach(btn => {
+         btn.addEventListener('mouseenter', function() {
+            this.style.animation = 'pulse 0.5s ease-in-out';
+         });
+         
+         btn.addEventListener('mouseleave', function() {
+            this.style.animation = 'none';
+         });
+      });
+
+      // Add checkout button pulse if cart has items
+      const checkoutBtn = document.querySelector('.cart-total .btn:not(.disabled)');
+      if (checkoutBtn) {
+         setInterval(() => {
+            checkoutBtn.style.animation = 'pulse 1s ease-in-out';
+            setTimeout(() => {
+               checkoutBtn.style.animation = 'none';
+            }, 1000);
+         }, 5000);
+      }
+
+      // Add smooth scroll to cart total when items are updated
+      const cartTotal = document.querySelector('.cart-total');
+      if (cartTotal) {
+         const observer = new MutationObserver(() => {
+            cartTotal.scrollIntoView({ behavior: 'smooth', block: 'center' });
+         });
+      }
+   });
+
+   // Add CSS for smooth transitions
+   const style = document.createElement('style');
+   style.textContent = `
+      .box {
+         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      
+      .qty {
+         transition: transform 0.2s ease;
+      }
+   `;
+   document.head.appendChild(style);
+</script>
 
 </body>
 </html>

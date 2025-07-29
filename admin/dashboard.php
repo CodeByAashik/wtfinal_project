@@ -26,6 +26,7 @@ if(!isset($admin_id)){
 
    <!-- custom css file link  -->
    <link rel="stylesheet" href="../css/admin_style.css">
+   <link rel="stylesheet" href="../css/admin-dashboard.css">
 
 </head>
 <body style="background-image: url('images/food-1024x683.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
@@ -42,8 +43,8 @@ if(!isset($admin_id)){
 
    <div class="box">
       <h3>welcome!</h3>
-      <p><?= $fetch_profile['name']; ?></p>
-      <a href="update_profile.php" class="btn">update profile</a>
+      <p style="color:black;"><?= $fetch_profile['name']; ?></p>
+      <a href="update_profile.php" class="btna">update profile</a>
    </div>
 
    <div class="box">
@@ -57,7 +58,7 @@ if(!isset($admin_id)){
       ?>
       <h3><span>$</span><?= $total_pendings; ?><span>/-</span></h3>
       <p>total pendings</p>
-      <a href="placed_orders.php" class="btn">see orders</a>
+      <a href="placed_orders.php" class="btna">see orders</a>
    </div>
 
    <div class="box">
@@ -71,7 +72,7 @@ if(!isset($admin_id)){
       ?>
       <h3><span>$</span><?= $total_completes; ?><span>/-</span></h3>
       <p>total completes</p>
-      <a href="placed_orders.php" class="btn">see orders</a>
+      <a href="placed_orders.php" class="btna">see orders</a>
    </div>
 
    <div class="box">
@@ -82,7 +83,7 @@ if(!isset($admin_id)){
       ?>
       <h3><?= $numbers_of_orders; ?></h3>
       <p>total orders</p>
-      <a href="placed_orders.php" class="btn">see orders</a>
+      <a href="placed_orders.php" class="btna">see orders</a>
    </div>
 
    <div class="box">
@@ -93,7 +94,7 @@ if(!isset($admin_id)){
       ?>
       <h3><?= $numbers_of_products; ?></h3>
       <p>products added</p>
-      <a href="products.php" class="btn">see products</a>
+      <a href="products.php" class="btna">see products</a>
    </div>
 
    <div class="box">
@@ -104,7 +105,7 @@ if(!isset($admin_id)){
       ?>
       <h3><?= $numbers_of_users; ?></h3>
       <p>users accounts</p>
-      <a href="users_accounts.php" class="btn">see users</a>
+      <a href="users_accounts.php" class="btna">see users</a>
    </div>
 
    <div class="box">
@@ -115,7 +116,7 @@ if(!isset($admin_id)){
       ?>
       <h3><?= $numbers_of_admins; ?></h3>
       <p>admins</p>
-      <a href="admin_accounts.php" class="btn">see admins</a>
+      <a href="admin_accounts.php" class="btna">see admins</a>
    </div>
 
    <div class="box">
@@ -126,7 +127,7 @@ if(!isset($admin_id)){
       ?>
       <h3><?= $numbers_of_messages; ?></h3>
       <p>new messages</p>
-      <a href="messages.php" class="btn">see messages</a>
+      <a href="messages.php" class="btna">see messages</a>
    </div>
 
    </div>

@@ -58,15 +58,18 @@ if(isset($_POST['submit'])){
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>checkout</title>
+   <title>Checkout - Quickerr</title>
 
    <!-- font awesome cdn link  -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <!-- Google Fonts -->
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
    <!-- custom css file link  -->
-   <link rel="stylesheet" href="css/style.css">
+   <!-- <link rel="stylesheet" href="css/style.css"> -->
    <link rel="stylesheet" href="css/header.css">
    <link rel="stylesheet" href="css/footer.css">
+   <link rel="stylesheet" href="css/checkout.css">
 
 </head>
 <body>
@@ -76,18 +79,18 @@ if(isset($_POST['submit'])){
 <!-- header section ends -->
 
 <div class="heading">
-   <h3>checkout</h3>
+   <h3>Secure Checkout</h3>
    <p><a href="home.php">home</a> <span> / checkout</span></p>
 </div>
 
 <section class="checkout">
 
-   <h1 class="title">order summary</h1>
+   <h1 class="title">Complete Your Order</h1>
 
 <form action="" method="post">
 
    <div class="cart-items">
-      <h3>cart items</h3>
+      <h3>Order Summary</h3>
       <?php
          $grand_total = 0;
          $cart_items[] = '';
@@ -103,11 +106,11 @@ if(isset($_POST['submit'])){
       <?php
             }
          }else{
-            echo '<p class="empty">your cart is empty!</p>';
+            echo '<p class="empty">Your cart is empty! Add some delicious items to continue.</p>';
          }
       ?>
-      <p class="grand-total"><span class="name">grand total :</span><span class="price">$<?= $grand_total; ?></span></p>
-      <a href="cart.php" class="btn">veiw cart</a>
+      <p class="grand-total"><span class="name">Total Amount:</span><span class="price">$<?= $grand_total; ?></span></p>
+      <a href="cart.php" class="btn">View Cart Details</a>
    </div>
 
    <input type="hidden" name="total_products" value="<?= $total_products; ?>">
@@ -118,47 +121,87 @@ if(isset($_POST['submit'])){
    <input type="hidden" name="address" value="<?= $fetch_profile['address'] ?>">
 
    <div class="user-info">
-      <h3>your info</h3>
+      <h3>Customer Information</h3>
       <p><i class="fas fa-user"></i><span><?= $fetch_profile['name'] ?></span></p>
       <p><i class="fas fa-phone"></i><span><?= $fetch_profile['number'] ?></span></p>
       <p><i class="fas fa-envelope"></i><span><?= $fetch_profile['email'] ?></span></p>
-      <a href="update_profile.php" class="btn">update info</a>
-      <h3>delivery address</h3>
-      <p><i class="fas fa-map-marker-alt"></i><span><?php if($fetch_profile['address'] == ''){echo 'please enter your address';}else{echo $fetch_profile['address'];} ?></span></p>
-      <a href="update_address.php" class="btn">update address</a>
+      <a href="update_profile.php" class="btn">Update Information</a>
+      
+      <h3>Delivery Address</h3>
+      <p><i class="fas fa-map-marker-alt"></i><span><?php if($fetch_profile['address'] == ''){echo 'Please enter your delivery address';}else{echo $fetch_profile['address'];} ?></span></p>
+      <a href="update_address.php" class="btn">Update Address</a>
+      
       <select name="method" class="box" required>
-         <option value="" disabled selected>select payment method --</option>
-         <option value="cash on delivery">cash on delivery</option>
-         <option value="credit card">credit card</option>
-         <option value="paytm">paytm</option>
-         <option value="paypal">paypal</option>
+         <option value="" disabled selected>Choose Payment Method</option>
+         <option value="cash on delivery">💵 Cash on Delivery</option>
+         <option value="credit card">💳 Credit Card</option>
+         <option value="paytm">📱 Paytm</option>
+         <option value="paypal">🌐 PayPal</option>
       </select>
-      <input type="submit" value="place order" class="btn <?php if($fetch_profile['address'] == ''){echo 'disabled';} ?>" style="width:100%; background:var(--red); color:var(--white);" name="submit">
+      
+      <input type="submit" value="🚀 Place Order Now" class="btn <?php if($fetch_profile['address'] == ''){echo 'disabled';} ?>" style="width:100%; background:var(--gradient); color:var(--white); font-size: 1.1rem; padding: 1rem 2rem;" name="submit">
    </div>
 
 </form>
    
 </section>
 
-
-
-
-
-
-
-
-
 <!-- footer section starts  -->
 <?php include 'components/footer.php'; ?>
 <!-- footer section ends -->
 
-
-
-
-
-
 <!-- custom js file link  -->
 <script src="js/script.js"></script>
+
+<script>
+   // Add smooth animations
+   document.addEventListener('DOMContentLoaded', function() {
+      // Animate cart items
+      const cartItems = document.querySelectorAll('.cart-items p');
+      cartItems.forEach((item, index) => {
+         item.style.opacity = '0';
+         item.style.transform = 'translateX(-20px)';
+         item.style.transition = 'all 0.5s ease';
+         
+         setTimeout(() => {
+            item.style.opacity = '1';
+            item.style.transform = 'translateX(0)';
+         }, index * 100);
+      });
+
+      // Add hover effect to payment options
+      const selectBox = document.querySelector('select[name="method"]');
+      if (selectBox) {
+         selectBox.addEventListener('change', function() {
+            this.style.borderColor = 'var(--accent-color)';
+            this.style.boxShadow = '0 0 0 3px rgba(39,174,96,0.1)';
+         });
+      }
+
+      // Add pulse animation to place order button
+      const submitBtn = document.querySelector('input[type="submit"]');
+      if (submitBtn && !submitBtn.classList.contains('disabled')) {
+         submitBtn.addEventListener('mouseenter', function() {
+            this.style.animation = 'pulse 1s infinite';
+         });
+         
+         submitBtn.addEventListener('mouseleave', function() {
+            this.style.animation = 'none';
+         });
+      }
+   });
+
+   // Add CSS animation for pulse effect
+   const style = document.createElement('style');
+   style.textContent = `
+      @keyframes pulse {
+         0% { transform: scale(1); }
+         50% { transform: scale(1.05); }
+         100% { transform: scale(1); }
+      }
+   `;
+   document.head.appendChild(style);
+</script>
 
 </body>
 </html>
