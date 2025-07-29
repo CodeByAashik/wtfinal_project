@@ -1,0 +1,81 @@
+/* Parent container */
+.address-section {
+  display: flex;
+  max-width: 900px;
+  margin: 50px auto;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Left image container */
+.address-image {
+  width: 40%;
+  background: #f4f4f4;
+}
+.address-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Right form container */
+.form-container {
+  width: 60%;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Form styling */
+.form-container form {
+  width: 100%;
+}
+
+.form-container h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+  color: #333;
+}
+
+.form-container .box {
+  display: block;
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.form-container .btn {
+  background: #ff6b35;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  transition: 0.3s ease;
+}
+
+.form-container .btn:hover {
+  background: #e85b2a;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .address-section {
+    flex-direction: column;
+  }
+  .address-image, .form-container {
+    width: 100%;
+  }
+  .address-image {
+    height: 200px;
+  }
+}

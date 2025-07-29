@@ -26,6 +26,8 @@ include 'components/add_cart.php';
 
    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
 
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
@@ -33,6 +35,7 @@ include 'components/add_cart.php';
    <link rel="stylesheet" href="css/style.css">
    <link rel="stylesheet" href="css/footer.css">
    <link rel="stylesheet" href="css/header.css">
+   <link rel="stylesheet" href="css/customer-rev.css">
 
    <style>
       .box-container {
@@ -202,7 +205,47 @@ include 'components/add_cart.php';
 
 
 
-<?php include 'components/footer.php'; ?>
+
+<?php include 'components/customer-rev.php'; ?>
+
+<!-- Location section -->
+ <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+ <div class="loc-container">
+    <section class="location">
+       <!-- Floating Info Box -->
+       <div class="info-card">
+          <h2 id="m-nor">Quickerr Restaurant</h2>
+          <h3 id="m-aor">Kathmandu</h3>
+          <p id="">Balkumari, Lalitpur, <br>Nepal</p>
+          <p><strong>Phone number</strong><br>9819893465</p>
+          <p><strong>Website</strong><br><a href="https://www.aashikthakur.com.np" target="_blank">https://www.aashikthakur.com.np</a></p>
+         </div>
+         
+         <!-- Map Container -->
+         <div id="map"></div>
+      </section>
+   </div>
+
+<script>
+   
+   const centerCoords = [27.7172, 85.3240];  // Kathmandu
+   
+   const map = L.map('map').setView(centerCoords, 15);
+   
+   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+   }).addTo(map);
+   
+   // 📍 Add marker at center location
+   const marker = L.marker(centerCoords).addTo(map)
+   .bindPopup("<b>Quickerr</b><br>Balkumari")
+   .openPopup();
+</script>
+
+
+
+   <?php include 'components/footer.php'; ?>
+
 
 
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>

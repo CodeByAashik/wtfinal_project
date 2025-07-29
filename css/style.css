@@ -883,5 +883,56 @@ section{
 }
 
 /*new styles*/
+/* location section  */
 
+   .loc-container{
+      width: 100vw;
+   }
+
+    .location {
+        position: relative;
+        height: 50vh;
+        width: 100%;
+        margin-top: 60px;
+    }
+
+    #map {
+      height: 100%;
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 5px 5px 14px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    .info-card {
+      position: absolute;
+      top: 50px;
+      left: 50px;
+      background-color: #0c1027;
+      color: white;
+      padding: 25px;
+      border-radius: 15px;
+      width: 320px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+    }
+
+    .info-card h2 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    .info-card h3 {
+      color: orange;
+      margin: 8px 0;
+    }
+
+    .info-card p, .info-card a {
+      font-size: 15px;
+      margin: 5px 0;
+    }
+
+    .info-card a {
+      color: #f89e3e;
+      text-decoration: none;
+    }
 

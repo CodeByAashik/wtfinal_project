@@ -4,12 +4,9 @@
 
 <footer class="quickerr-footer">
     <div class="footer-container">
-        <!-- Main Footer Content -->
         <div class="footer-content">
-            <!-- Left Section with Logo/Image Placeholder -->
             <div class="footer-left">
                 <div class="footer-logo">
-                    <!-- Image Placeholder -->
                     <div class="logo-placeholder">
                         <img src="images/logo.png" alt="Quickerr Logo" class="footer-logo-img">
                     </div>
@@ -20,7 +17,6 @@
                 </div>
             </div>
 
-            <!-- Center Section - Quick Links -->
             <div class="footer-center">
                 <div class="footer-links">
                     <div class="link-column">

@@ -40,16 +40,21 @@ if(isset($_POST['submit'])){
    <link rel="stylesheet" href="css/style.css">
    <link rel="stylesheet" href="css/footer.css">
    <link rel="stylesheet" href="css/header.css">
+   <link rel="stylesheet" href="css/update_address.css">
 
 </head>
 <body>
    
 <?php include 'components/user_header.php' ?>
 
-<section class="form-container">
+<section class="address-section">
+  <div class="address-image">
+    <img src="project_images/update_address.png" alt="Address Illustration">
+  </div>
 
-   <form action="" method="post">
-      <h3>your address</h3>
+  <div class="form-container">
+    <form action="" method="post">
+      <h3>Your Address</h3>
       <input type="text" class="box" placeholder="flat no." required maxlength="50" name="flat">
       <input type="text" class="box" placeholder="building no." required maxlength="50" name="building">
       <input type="text" class="box" placeholder="area name" required maxlength="50" name="area">
@@ -58,10 +63,11 @@ if(isset($_POST['submit'])){
       <input type="text" class="box" placeholder="state name" required maxlength="50" name="state">
       <input type="text" class="box" placeholder="country name" required maxlength="50" name="country">
       <input type="number" class="box" placeholder="pin code" required max="999999" min="0" maxlength="6" name="pin_code">
-      <input type="submit" value="save address" name="submit" class="btn">
-   </form>
-
+      <input type="submit" value="Save Address" name="submit" class="btn">
+    </form>
+  </div>
 </section>
+
 
 
 
