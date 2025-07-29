@@ -52,6 +52,8 @@ $grand_total = 0;
 
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/footer.css">
+   <link rel="stylesheet" href="css/header.css">
 
 </head>
 <body>

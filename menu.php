@@ -30,7 +30,7 @@ include 'components/add_cart.php';
    <link rel="stylesheet" href="css/style.css">
    <link rel="stylesheet" href="css/header.css">
    <link rel="stylesheet" href="css/footer.css">
-
+   <link rel="stylesheet" href="css/menu.css">
 </head>
 <body>
    
@@ -43,8 +43,8 @@ include 'components/add_cart.php';
    <p><a href="home.php">home</a> <span> / menu</span></p>
 </div>
 
-<!-- menu section starts  -->
 
+<!-- menu section starts  -->
 <section class="products">
 
    <h1 class="title">latest dishes</h1>
