@@ -63,17 +63,20 @@ if(isset($_POST['submit'])){
 
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/register.css">
    <link rel="stylesheet" href="css/footer.css">
    <link rel="stylesheet" href="css/header.css">
 
 </head>
-<body style="background-image: url('images/food-1024x683.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-   
+<body>  
 <!-- header section starts  -->
 <?php include 'components/user_header.php'; ?>
 <!-- header section ends -->
 
 <section class="form-container" style="background-color: white;">
+   <div class="left">
+      <img src="images/food-1024x683.jpg" class="login-img" alt="">
+   </div>
 
    <form action="" method="post">
       <h3>register now</h3>
@@ -82,7 +85,7 @@ if(isset($_POST['submit'])){
       <input type="number" name="number" required placeholder="enter your number" class="box" min="0" max="9999999999" maxlength="10">
       <input type="password" name="pass" required placeholder="enter your password" class="box" maxlength="50" oninput="this.value = this.value.replace(/\s/g, '')">
       <input type="password" name="cpass" required placeholder="confirm your password" class="box" maxlength="50" oninput="this.value = this.value.replace(/\s/g, '')">
-      <input type="submit" value="register now" name="submit" class="btn">
+      <input type="submit" value="register now" name="submit" class="btnr">
       <p>already have an account? <a href="login.php">login now</a></p>
    </form>
 

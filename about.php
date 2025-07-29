@@ -38,7 +38,7 @@ if(isset($_SESSION['user_id'])){
 <?php include 'components/user_header.php'; ?>
 <!-- header section ends -->
 
-<div class="heading">
+<div class="heading" style="background-color:#2c3e50;">
    <h3>about us</h3>
    <p><a href="home.php">home</a> <span> / about</span></p>
 </div>
@@ -118,7 +118,7 @@ if(isset($_SESSION['user_id'])){
 
 <!-- footer section starts  -->
 <?php include 'components/footer.php'; ?>
-<!-- footer section ends -->=
+<!-- footer section ends -->
 
 
 

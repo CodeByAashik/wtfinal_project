@@ -4,7 +4,7 @@
    --yellow:#fed330;
    --red:#e74c3c;
    --white:#fff;
-   --black:#222;
+   --black: #2c3e50;
    --light-color:#777;
    --border:.2rem solid var(--black);
 }
@@ -230,6 +230,7 @@ section{
 }
 
 .products .box-container .box{
+   border-radius: 20px;
    border:var(--border);
    padding:1.5rem;
    position: relative;
@@ -257,6 +258,7 @@ section{
    color:var(--black);
    transition: .2s linear;
    text-align: center;
+   border-radius: 50%;
 }
 
 .products .box-container .box .fa-eye:hover,

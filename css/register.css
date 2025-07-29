@@ -1,0 +1,103 @@
+/* FORM CONTAINER - same for login & register */
+.form-container {
+  min-height: calc(100vh - 200px); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+}
+
+/* Login Form */
+.form-container {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  padding: 0px 30px 0px 0px;
+  margin: 20px auto;
+  width: 900px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  animation: fadeIn 0.6s ease;
+  overflow: hidden;
+}
+
+
+.left{
+    height: 100%;
+    border-right: 4px solid blue;
+    width: 600px;
+}
+
+.login-img{
+    width: 100%;
+    height: 100%;
+}
+
+form{
+    padding-left: 25px;
+    width: 60%;
+}
+
+
+/* Title */
+.form-container form h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #1b5e20;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+/* Input fields */
+.form-container form .box {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 12px 0;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+.form-container form .box:focus {
+  border-color: #43a047;
+  box-shadow: 0 0 8px rgba(67, 160, 71, 0.3);
+}
+
+/* Buttons */
+.form-container form .btnr {
+  width: 100%;
+  padding: 12px;
+  background: #f89d0b;;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.form-container form .btnr:hover {
+  background: #f39c12;;
+}
+
+/* Below button text */
+.form-container form p {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #444;
+}
+.form-container form p a {
+  color: #1b5e20;
+  text-decoration: none;
+  font-weight: 500;
+}
+.form-container form p a:hover {
+  text-decoration: underline;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {opacity: 0; transform: scale(0.95);}
+  to {opacity: 1; transform: scale(1);}
+}
