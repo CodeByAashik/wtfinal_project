@@ -36,6 +36,9 @@ include 'components/add_cart.php';
    <link rel="stylesheet" href="css/footer.css">
    <link rel="stylesheet" href="css/header.css">
    <link rel="stylesheet" href="css/customer-rev.css">
+   <link rel="stylesheet" href="css/delivery-info.css">
+   <link rel="stylesheet" href="css/hero.css">
+   <link rel="stylesheet" href="css/category.css">
 
    <style>
       .box-container {
@@ -62,7 +65,7 @@ include 'components/add_cart.php';
 <?php include 'components/user_header.php'; ?>
 
 
-
+<?php include 'components/hero.php'; ?>
 <section class="hero">
 
    <div class="swiper hero-slider">
@@ -107,41 +110,38 @@ include 'components/add_cart.php';
       <div class="swiper-pagination"></div>
 
    </div>
-
 </section>
 
-<section class="category" style="position: relative; background-image: url('images/food-1024x683.jpg'); background-size: cover; background-position: center;">
 
-   <!-- Pseudo-element for white mist and blur effect -->
-   <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255, 255, 255, 0.5); filter: blur(10px);"></div>
 
-   <h1 class="title" style="color: white;">food category</h1>
+<section class="category">
+  <div class="category-overlay"></div>
 
-   <div class="box-container">
+  <h1 class="title">Food Category</h1>
 
-      <a href="category.php?category=fast food" class="box" style="background-color: #your_default_color;">
-         <img src="images/cat-1.png" alt="">
-         <h3>fast food</h3>
-      </a>
+  <div class="category-grid">
+    <a href="category.php?category=fast food" class="cat-card">
+      <img src="images/cat-1.png" alt="Fast Food">
+      <h3>Fast Food</h3>
+    </a>
 
-      <a href="category.php?category=main dish" class="box" style="background-color: #your_default_color;">
-         <img src="images/cat-2.png" alt="">
-         <h3>main dishes</h3>
-      </a>
+    <a href="category.php?category=main dish" class="cat-card">
+      <img src="images/cat-2.png" alt="Main Dishes">
+      <h3>Main Dishes</h3>
+    </a>
 
-      <a href="category.php?category=drinks" class="box" style="background-color: #your_default_color;">
-         <img src="images/cat-3.png" alt="">
-         <h3>drinks</h3>
-      </a>
+    <a href="category.php?category=drinks" class="cat-card">
+      <img src="images/cat-3.png" alt="Drinks">
+      <h3>Drinks</h3>
+    </a>
 
-      <a href="category.php?category=desserts" class="box" style="background-color: #your_default_color;">
-         <img src="images/cat-4.png" alt="">
-         <h3>desserts</h3>
-      </a>
-
-   </div>
-
+    <a href="category.php?category=desserts" class="cat-card">
+      <img src="images/cat-4.png" alt="Desserts">
+      <h3>Desserts</h3>
+    </a>
+  </div>
 </section>
+
 
 
 
@@ -205,7 +205,7 @@ include 'components/add_cart.php';
 
 
 
-
+<?php include 'components/delivery-info.php'; ?>
 <?php include 'components/customer-rev.php'; ?>
 
 <!-- Location section -->
