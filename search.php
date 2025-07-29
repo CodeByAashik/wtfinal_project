@@ -27,9 +27,10 @@ include 'components/add_cart.php';
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
    <!-- custom css file link  -->
-   <link rel="stylesheet" href="css/style.css">
+   <!-- <link rel="stylesheet" href="css/style.css"> -->
    <link rel="stylesheet" href="css/footer.css">
    <link rel="stylesheet" href="css/header.css">
+   <link rel="stylesheet" href="css/search.css">
 
 </head>
 <body style="background-image: url('images/2016_09_29_12990_1475116504._large.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
@@ -39,7 +40,6 @@ include 'components/add_cart.php';
 <!-- header section ends -->
 
 <!-- search form section starts  -->
-
 <section class="search-form">
    <form method="post" action="">
       <input type="text" name="search_box" placeholder="search here..." class="box">

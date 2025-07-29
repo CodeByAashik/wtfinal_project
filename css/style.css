@@ -223,7 +223,7 @@ section{
 
 .products .box-container{
    display: grid;
-   grid-template-columns: repeat(auto-fit, 33rem);
+   grid-template-columns: 1fr 1fr 1fr 1fr;
    justify-content: center;
    align-items: flex-start;
    gap:1.5rem;

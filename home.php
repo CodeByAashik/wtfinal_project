@@ -20,7 +20,7 @@ include 'components/add_cart.php';
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>The Outer Clove</title>
+   <title>Quickerr</title>
 
    <link rel="icon" href="images/LYgjKqzpQb.ico" type="image/x-icon">
 
@@ -145,7 +145,7 @@ include 'components/add_cart.php';
 
 <section class="products">
 
-   <h1 class="title">latest dishes</h1>
+   <h1 class="title">Menu</h1>
 
    <div class="box-container">
 

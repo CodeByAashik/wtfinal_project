@@ -38,11 +38,15 @@ if(isset($_POST['submit'])){
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
    <!-- custom css file link  -->
-   <link rel="stylesheet" href="../css/admin_style.css">
+    
+   <!-- <link rel="stylesheet" href="../css/admin_style.css"> -->
+   <link rel="stylesheet" href="../css/admin-login.css">
 
 </head>
-<body  style="background-image: url('images/food-1024x683.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+<body >
 
 <?php
 if(isset($message)){
@@ -59,13 +63,13 @@ if(isset($message)){
 
 <!-- admin login form section starts  -->
 
-<section class="form-container" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 15px; padding: 20px; width: 300px; margin: auto; text-align: center;">
+<section class="form-container">
 
    <form action="" method="POST">
-      <h3 style="color: #000000;">login now</h3>
+      <h3 style="color: white">Admin login</h3>
       <input type="text" name="name" maxlength="20" required placeholder="enter your username" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
       <input type="password" name="pass" maxlength="20" required placeholder="enter your password" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
-      <input type="submit" value="login now" name="submit" class="btn" style="background-color: #4CAF50; color: #fff; border: none; padding: 10px 15px; cursor: pointer;">
+      <input type="submit" value="login now" name="submit" class="btn" style=>
    </form>
 
 </section>

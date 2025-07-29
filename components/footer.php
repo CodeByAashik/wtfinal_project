@@ -59,7 +59,7 @@
             <div class="footer-right">
                 <div class="contact-info">
                     <h4>Get in Touch</h4>
-                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-phone"></i> 9819893465</p>
                     <p><i class="fas fa-envelope"></i> support@quickerr.com</p>
                 </div>
                 
