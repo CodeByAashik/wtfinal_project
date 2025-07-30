@@ -40,8 +40,9 @@ include 'components/add_cart.php';
    <link rel="stylesheet" href="css/hero.css">
    <link rel="stylesheet" href="css/category.css">
    <link rel="stylesheet" href="css/hero-products.css">
-
+   <link rel="stylesheet" href="css/how-it-works.css">
    <style>
+        
       .box-container {
          display: flex;
          justify-content: space-between;
@@ -56,6 +57,7 @@ include 'components/add_cart.php';
       .box:hover {
          background-color: rgba(240, 222, 222, 1);
       }
+
    </style>
 
 </head>
@@ -197,6 +199,54 @@ include 'components/add_cart.php';
 
 
 
+<!-- Why Choose Us Section -->
+<section class="why-choose-us">
+   <h1 class="title">Why Choose <span style="color:#FC8A06;">Quickerr?</span></h1>
+   <div class="why-grid">
+      <div class="why-card">
+         <i class="fas fa-shipping-fast"></i>
+         <h3>Fast Delivery</h3>
+         <p>Get your food delivered hot and fresh in 30 minutes or less.</p>
+      </div>
+      <div class="why-card">
+         <i class="fas fa-utensils"></i>
+         <h3>Quality Food</h3>
+         <p>We partner with top-rated restaurants for the best taste.</p>
+      </div>
+      <div class="why-card">
+         <i class="fas fa-tags"></i>
+         <h3>Affordable Pricing</h3>
+         <p>Enjoy delicious meals at pocket-friendly prices.</p>
+      </div>
+      <div class="why-card">
+         <i class="fas fa-headset"></i>
+         <h3>24/7 Support</h3>
+         <p>Our support team is always there to help you out.</p>
+      </div>
+   </div>
+</section>
+
+<!-- How It Works Section -->
+<section class="how-it-works">
+   <h1 class="title">How It Works?</h1>
+   <div class="steps-grid">
+      <div class="step-card">
+         <span class="step-number">1</span>
+         <h3>Browse Menu</h3>
+         <p>Explore our wide variety of meals and select what you love.</p>
+      </div>
+      <div class="step-card">
+         <span class="step-number">2</span>
+         <h3>Place Order</h3>
+         <p>Add to cart, confirm your order and pay online or on delivery.</p>
+      </div>
+      <div class="step-card">
+         <span class="step-number">3</span>
+         <h3>Enjoy Delivery</h3>
+         <p>Sit back and relax while we deliver your meal to your door.</p>
+      </div>
+   </div>
+</section>
 
 
 

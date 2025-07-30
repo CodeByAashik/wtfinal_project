@@ -1,0 +1,98 @@
+
+/* Why Choose Us Section */
+.why-choose-us {
+   padding: 6rem 2rem;
+   background: #f8f9fa;
+   text-align: center;
+   font-size: 2.6rem;
+}
+
+.title{
+    
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 8px;
+}
+
+.why-choose-us .why-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+   gap: 3rem;
+   max-width: 110rem;
+   margin: 4rem auto 0;
+}
+.why-card {
+   background: #fff;
+   border-radius: 2rem;
+   padding: 3rem 2.5rem;
+   box-shadow: 0 0.7rem 2rem rgba(0,0,0,0.1);
+   transition: all 0.3s ease;
+   font-size: 2.6rem;
+}
+.why-card:hover {
+   transform: translateY(-0.7rem);
+   box-shadow: 0 1.4rem 2.5rem rgba(0,0,0,0.15);
+}
+.why-card i {
+   font-size: 5rem;
+   color: #FC8A06;
+   margin-bottom: 2rem;
+}
+.why-card h3 {
+   font-size: 2.2rem;
+   margin-bottom: 1.2rem;
+   color: #2c3e50;
+}
+.why-card p {
+   font-size: 1.6rem;
+   color: #7f8c8d;
+}
+
+/* How It Works Section */
+.how-it-works {
+   padding: 6rem 2rem;
+   text-align: center;
+   background: transparent;
+   font-size: 2.6rem;
+}
+.how-it-works .steps-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+   gap: 3rem;
+   max-width: 100rem;
+   margin: 4rem auto 0;
+}
+.step-card {
+   background: #f8f9fa;
+   border-radius: 2rem;
+   padding: 3rem 2.5rem;
+   position: relative;
+   box-shadow: 0 0.7rem 2rem rgba(0,0,0,0.05);
+   transition: all 0.3s ease;
+}
+.step-card:hover {
+   transform: translateY(-0.7rem);
+   box-shadow: 0 1.4rem 2.5rem rgba(0,0,0,0.1);
+}
+.step-number {
+   width: 5.5rem;
+   height: 5.5rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background: #FC8A06;
+   color: #fff;
+   font-size: 2.2rem;
+   font-weight: bold;
+   border-radius: 50%;
+   margin: 0 auto 2rem;
+}
+.step-card h3 {
+   font-size: 2.4rem;
+   margin-bottom: 1rem;
+   color: #2c3e50;
+}
+.step-card p {
+   font-size: 1.6rem;
+   color: #7f8c8d;
+}

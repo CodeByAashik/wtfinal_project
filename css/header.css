@@ -93,7 +93,7 @@
    background: rgba(255, 255, 255, 0.15);
    transform: translateY(-2px);
    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-   color: #f39c12;
+   color: #FC8A06;
 }
 
 /* Icons Styling */
@@ -121,7 +121,7 @@
    background: rgba(255, 255, 255, 0.2);
    transform: translateY(-3px);
    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-   color: #f39c12;
+   color: #FC8A06;
 }
 
 .icons a span {
@@ -147,7 +147,7 @@
    background: white;
    border-radius: 15px;
    box-shadow: 0 15px 35px rgba(255, 107, 53, 0.2);
-   padding: 2rem;
+   padding: 4rem;
    min-width: 300px;
    transform: translateY(10px);
    opacity: 0;
@@ -162,17 +162,6 @@
    visibility: visible;
 }
 
-.profile::before {
-   content: '';
-   position: absolute;
-   top: -10px;
-   right: 30px;
-   width: 0;
-   height: 0;
-   border-left: 10px solid transparent;
-   border-right: 10px solid transparent;
-   border-bottom: 10px solid white;
-}
 
 .profile .name {
    color: #ff6b35;
@@ -192,7 +181,7 @@
 .profile .btn {
    background: linear-gradient(135deg, #ff6b35, #f7931e);
    color: black;
-   padding: 10px 20px;
+   padding: 10px 35px;
    text-decoration: none;
    border-radius: 25px;
    font-weight: 600;
@@ -322,4 +311,22 @@
    transform: translateY(0);
    opacity: 1;
    visibility: visible;
+}
+
+.login-btn{
+   color: white;
+   font-size: 1.7rem;
+   font-weight: bold;
+   margin-top: 5rem;
+   padding: 1rem 2.5rem;
+   background-color: #FC8A06;
+   border-radius: 2rem;
+   position: relative;
+   left: 25%;
+   transform: translateX(-50%);
+}
+
+.name{
+   margin-bottom: 2rem;
+   padding-bottom: 10px;
 }

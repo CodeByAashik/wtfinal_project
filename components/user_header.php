@@ -45,24 +45,24 @@ if(isset($message)){
             $select_profile->execute([$user_id]);
             if($select_profile->rowCount() > 0){
                $fetch_profile = $select_profile->fetch(PDO::FETCH_ASSOC);
-         ?>
-         <p class="name"><?= $fetch_profile['name']; ?></p>
-         <div class="flex">
-            <a href="profile.php" class="btn">profile</a>
-            <a href="components/user_logout.php" onclick="return confirm('logout from this website?');" class="delete-btn">logout</a>
-         </div>
-         <p class="account">
-            <a href="login.php">login</a> or
-            <a href="register.php">register</a>
-         </p> 
-         <?php
-            }else{
-         ?>
-            <p class="name">please login first!</p>
-            <a href="login.php" class="btn">login</a>
-         <?php
-          }
-         ?>
+               ?>
+               <p class="name"><?= $fetch_profile['name']; ?></p>
+               <div class="flex">
+                  <a href="profile.php" class="btn">profile</a>
+                  <a href="components/user_logout.php" onclick="return confirm('logout from this website?');" class="delete-btn">logout</a>
+               </div>
+               <p class="account">
+                  <a href="login.php">login</a> or
+                  <a href="register.php">register</a>
+               </p> 
+               <?php
+               }else{
+               ?>
+                  <p class="name">please login first!</p>
+                  <a href="login.php" class="login-btn">login</a>
+               <?php
+               }
+               ?>
       </div>
 
    </section>
