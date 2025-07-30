@@ -168,9 +168,9 @@ include 'components/add_cart.php';
          <button type="submit" class="fas fa-shopping-cart" name="add_to_cart"></button>
          <img src="uploaded_img/<?= $fetch_products['image']; ?>" alt="">
          <a href="category.php?category=<?= $fetch_products['category']; ?>" class="cat"><?= $fetch_products['category']; ?></a>
-         <div class="name"><?= $fetch_products['name']; ?></div>
+         <div class="name"><?= $fetch_products['name'];?></div>
          <div class="flex">
-            <div class="price"><span>$</span><?= $fetch_products['price']; ?></div>
+            <div class="price"><span>Rs. </span><?= $fetch_products['price']; ?></div>
             <input type="number" name="qty" class="qty" min="1" max="10" value="1" maxlength="2">
          </div>
       </form>
@@ -214,12 +214,12 @@ include 'components/add_cart.php';
  <div class="loc-container">
     <section class="location">
        <!-- Floating Info Box -->
-       <div class="info-card">
-          <h2 id="m-nor">Quickerr Restaurant</h2>
-          <h3 id="m-aor">Kathmandu</h3>
-          <p id="">Balkumari, Lalitpur, <br>Nepal</p>
-          <p><strong>Phone number</strong><br>9819893465</p>
-          <p><strong>Website</strong><br><a href="https://www.aashikthakur.com.np" target="_blank">https://www.aashikthakur.com.np</a></p>
+       <div class="info-card-m">
+          <h2 id="m-nor" style="color:white;">Quickerr Restaurant</h2>
+          <h3 id="m-aor" >Kathmandu</h3>
+          <p id="m-loc" >Balkumari, Lalitpur, <br>Nepal</p>
+          <p ><strong>Phone number</strong><br>9819893465</p>
+          <p ><strong>Website</strong><br><a href="https://www.aashikthakur.com.np" target="_blank">https://www.aashikthakur.com.np</a></p>
          </div>
          
          <!-- Map Container -->

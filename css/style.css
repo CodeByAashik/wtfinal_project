@@ -30,46 +30,6 @@ section{
    padding:2rem;
 }
 
-.title{
-   text-align: center;
-   margin-bottom: 2.5rem;
-   font-size: 4rem;
-   color:var(--black);
-   text-transform: uppercase;
-   text-decoration: underline;
-   text-underline-offset: 1rem;
-}
-
-.heading{
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   gap:1rem;
-   flex-flow: column;
-   background-color: var(--black);
-   min-height: 20rem;
-}
-   
-.heading h3{
-   font-size: 3.5rem;
-   color:var(--white);
-   text-transform: capitalize;
-}
-
-.heading p{
-   font-size: 2.3rem;
-   color:var(--light-color);
-}
-
-.heading p a{
-   color:var(--yellow);
-}
-
-.heading p a:hover{
-   text-decoration: underline;
-   color:var(--white);
-}
-
 .disabled{
    opacity: .5;
    user-select: none;
@@ -254,14 +214,20 @@ section{
       width: 100%;
       border-radius: 12px;
       box-shadow: 5px 5px 14px 0px rgba(0, 0, 0, 0.25);
+      font-size: 13px;
     }
 
-    .info-card {
+    #map b{
+      color: #f89e3e;
+    }
+
+
+
+    .info-card-m {
       position: absolute;
       top: 50px;
       left: 50px;
       background-color: #0c1027;
-      color: white;
       padding: 25px;
       border-radius: 15px;
       width: 320px;
@@ -269,22 +235,24 @@ section{
       z-index: 1000;
     }
 
-    .info-card h2 {
+    #m-nor{
       margin: 0;
       font-size: 24px;
+      color: white;
     }
 
-    .info-card h3 {
+    #m-aor{
       color: orange;
       margin: 8px 0;
     }
 
-    .info-card p, .info-card a {
+    .info-card-m p, .info-card-m a {
       font-size: 15px;
       margin: 5px 0;
+      color: white;
     }
 
-    .info-card a {
+    .info-card-m a {
       color: #f89e3e;
       text-decoration: none;
     }

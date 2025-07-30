@@ -51,12 +51,15 @@
 .products .box .cat {
   font-size: 1.3rem;
   text-decoration: none;
-  color: #FC8A06;
+  color: white;
   margin-bottom: 8px;
+  background-color: #FC8A06;
+  padding: 5px 10px;
+  border-radius: 20px;
 }
 
 .products .box .name {
-  font-size: 2rem;
+  font-size: 2.3rem;
   font-weight: 600;
   margin-bottom: 10px;
   color: #333;
@@ -72,7 +75,7 @@
 }
 
 .products .box .price {
-  font-size: 1.1rem;
+  font-size: 1.8rem;
   font-weight: 600;
   color: #333;
 }
