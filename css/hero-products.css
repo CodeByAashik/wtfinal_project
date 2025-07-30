@@ -118,7 +118,8 @@
   margin-top: 40px;
 }
 
-.more-btn .btnv {
+.more-btn .btnv ,
+.btnv{
   padding: 10px 25px;
   background-color: #FC8A06;
   color: white;

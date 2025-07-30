@@ -1,13 +1,13 @@
-      /* Heading section */
+/* Heading section */
 .heading {
   text-align: center;
-  background: linear-gradient(to right, #aafaa5, #8df593);
+  background: #2c3e50;
   padding: 40px 20px;
 }
 .heading h3 {
   font-size: 30px;
   font-weight: 700;
-  color: #1b5e20;
+  color: white;
   margin-bottom: 10px;
 }
 .heading p {
@@ -15,12 +15,12 @@
   color: #333;
 }
 .heading p a {
-  color: #1b5e20;
+  color: white;
   text-decoration: none;
   font-weight: 500;
 }
 .heading p span {
-  color: #555;
+  color: #2c3e50;
 }
 
 /* Products Section */
@@ -33,7 +33,7 @@
   text-align: center;
   font-size: 32px;
   margin-bottom: 40px;
-  color: #1b5e20;
+  color: white;
   font-weight: 700;
 }
 

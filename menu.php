@@ -31,7 +31,7 @@ include 'components/add_cart.php';
    <link rel="stylesheet" href="css/header.css">
    <link rel="stylesheet" href="css/footer.css">
    <link rel="stylesheet" href="css/menu.css">
-    <link rel="stylesheet" href="css/cart.css">
+   <link rel="stylesheet" href="css/cart.css">
 </head>
 <body>
    

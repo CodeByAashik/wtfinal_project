@@ -17,7 +17,7 @@
                     <div class="card-container">
                         <div class="background-number">1</div>
                         <div class="card-content">
-                            <div class="logo"><img src="images/logo.png" alt=""></div>
+                            <div class="logoa"><img src="images/logo.png" alt=""></div>
                             <div class="time">now</div>
                             <div class="titlea">We’ve Received your order! 🚨</div>
                             <div class="subtitle">Awaiting Restaurant acceptance</div>
@@ -27,7 +27,7 @@
                     <div class="card-container2">
                         <div class="background-number">2</div>
                         <div class="card-content">
-                            <div class="logo"><img src="images/logo.png" alt=""></div>
+                            <div class="logoa"><img src="images/logo.png" alt=""></div>
                             <div class="time">now</div>
                             <div class="titlea">Order Accepted! </div>
                             <div class="subtitle">Your order will be delivered shortly</div>
@@ -37,7 +37,7 @@
                     <div class="card-container3">
                         <div class="background-number">3</div>
                         <div class="card-content">
-                            <div class="logo"><img src="images/logo.png" alt=""></div>
+                            <div class="logoa"><img src="images/logo.png" alt=""></div>
                             <div class="time">now</div>
                             <div class="titlea">Your rider's nearby 🚨</div>
                             <div class="subtitle">They're almost there, get Ready</div>

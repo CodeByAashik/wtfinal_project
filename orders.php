@@ -1,16 +1,12 @@
 <?php
-
 include 'components/connect.php';
-
 session_start();
-
 if(isset($_SESSION['user_id'])){
    $user_id = $_SESSION['user_id'];
 }else{
    $user_id = '';
    header('location:home.php');
 };
-
 ?>
 
 <!DOCTYPE html>
@@ -21,19 +17,20 @@ if(isset($_SESSION['user_id'])){
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Orders</title>
    <link rel="icon" href="images/LYgjKqzpQb.ico" type="image/x-icon">
-
-   <!-- font awesome cdn link  -->
+   
+   <!-- font awesome cdn link -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-
-   <!-- custom css file link  -->
+   
+   <!-- custom css file link -->
    <link rel="stylesheet" href="css/style.css">
    <link rel="stylesheet" href="css/header.css">
    <link rel="stylesheet" href="css/footer.css">
-
+   <link rel="stylesheet" href="css/orders.css">
+  
 </head>
 <body>
-   
-<!-- header section starts  -->
+
+<!-- header section starts -->
 <?php include 'components/user_header.php'; ?>
 <!-- header section ends -->
 
@@ -43,11 +40,9 @@ if(isset($_SESSION['user_id'])){
 </div>
 
 <section class="orders">
-
    <h1 class="title">your orders</h1>
-
+   
    <div class="box-container">
-
    <?php
       if($user_id == ''){
          echo '<p class="empty">please login to see your orders</p>';
@@ -66,7 +61,7 @@ if(isset($_SESSION['user_id'])){
       <p>payment method : <span><?= $fetch_orders['method']; ?></span></p>
       <p>your orders : <span><?= $fetch_orders['total_products']; ?></span></p>
       <p>total price : <span>$<?= $fetch_orders['total_price']; ?>/-</span></p>
-      <p> payment status : <span style="color:<?php if($fetch_orders['payment_status'] == 'pending'){ echo 'red'; }else{ echo 'green'; }; ?>"><?= $fetch_orders['payment_status']; ?></span> </p>
+      <p>payment status : <span style="color:<?php if($fetch_orders['payment_status'] == 'pending'){ echo 'red'; }else{ echo 'green'; }; ?>"><?= $fetch_orders['payment_status']; ?></span></p>
    </div>
    <?php
       }
@@ -75,30 +70,14 @@ if(isset($_SESSION['user_id'])){
       }
       }
    ?>
-
    </div>
-
 </section>
 
-
-
-
-
-
-
-
-
-
-<!-- footer section starts  -->
+<!-- footer section starts -->
 <?php include 'components/footer.php'; ?>
 <!-- footer section ends -->
 
-
-
-
-
-
-<!-- custom js file link  -->
+<!-- custom js file link -->
 <script src="js/script.js"></script>
 
 </body>
