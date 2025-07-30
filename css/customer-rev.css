@@ -141,6 +141,7 @@
     }
 
     .reviews{
+        font-size: 16px;
         position: absolute;
         display: flex;
         align-items: center;
@@ -161,7 +162,7 @@
     }
 
     .r-reviews-num{
-        font-size: 14px;
+        font-size: 17px;
         color: #FC8A06;
     }
 

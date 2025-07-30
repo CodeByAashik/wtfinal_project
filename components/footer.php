@@ -1,7 +1,4 @@
 
-
-
-
 <footer class="quickerr-footer">
     <div class="footer-container">
         <div class="footer-content">
@@ -87,19 +84,19 @@
                 
                 <!-- Social Media Icons -->
                 <div class="social-media">
-                    <a href="#" class="social-link" aria-label="Facebook">
+                    <a href="https://www.facebook.com/aashiq4u.admin.153" target="_blank" class="social-link" aria-label="Facebook">
                         <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a href="#" class="social-link" aria-label="Twitter">
+                    <a href="https://x.com/Aashiqthakur1" target="_blank" class="social-link" aria-label="Twitter">
                         <i class="fab fa-twitter"></i>
                     </a>
-                    <a href="#" class="social-link" aria-label="Instagram">
+                    <a href="https://www.instagram.com/reels/DJBNCOUM2HK/" target="_blank" class="social-link" aria-label="Instagram">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="#" class="social-link" aria-label="LinkedIn">
+                    <a href="https://www.linkedin.com/in/aashik-thakur-6568452a5/" target="_blank" class="social-link" aria-label="LinkedIn">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
-                    <a href="#" class="social-link" aria-label="YouTube">
+                    <a href="https://www.youtube.com/" target="_blank" class="social-link" aria-label="YouTube">
                         <i class="fab fa-youtube"></i>
                     </a>
                 </div>

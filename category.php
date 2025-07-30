@@ -1,7 +1,5 @@
 <?php
-
 include 'components/connect.php';
-
 session_start();
 
 if(isset($_SESSION['user_id'])){
@@ -11,7 +9,6 @@ if(isset($_SESSION['user_id'])){
 };
 
 include 'components/add_cart.php';
-
 ?>
 
 <!DOCTYPE html>
@@ -29,10 +26,10 @@ include 'components/add_cart.php';
    <link rel="stylesheet" href="css/style.css">
    <link rel="stylesheet" href="css/header.css">
    <link rel="stylesheet" href="css/footer.css">
-
+   <link rel="stylesheet" href="css/categorys.css">
 </head>
 <body>
-   
+
 <?php include 'components/user_header.php'; ?>
 
 <section class="products">
@@ -58,14 +55,14 @@ include 'components/add_cart.php';
          <img src="uploaded_img/<?= $fetch_products['image']; ?>" alt="">
          <div class="name"><?= $fetch_products['name']; ?></div>
          <div class="flex">
-            <div class="price"><span>$</span><?= $fetch_products['price']; ?></div>
+            <div class="price"><span>Rs. </span><?= $fetch_products['price']; ?></div>
             <input type="number" name="qty" class="qty" min="1" max="99" value="1" maxlength="2">
          </div>
       </form>
       <?php
             }
          }else{
-            echo '<p class="empty">no products added yet!</p>';
+            echo '<p class="empty">No product Under this category yet! Sorry for Inconvenience</p>';
          }
       ?>
 
@@ -73,30 +70,11 @@ include 'components/add_cart.php';
 
 </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <?php include 'components/footer.php'; ?>
 
-
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-
 <!-- custom js file link  -->
 <script src="js/script.js"></script>
-
 
 </body>
 </html>

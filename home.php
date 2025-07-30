@@ -207,7 +207,7 @@ include 'components/add_cart.php';
 
 
 <?php include 'components/delivery-info.php'; ?>
-<?php include 'components/customer-rev.php'; ?>
+
 
 <!-- Location section -->
  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
@@ -226,6 +226,8 @@ include 'components/add_cart.php';
          <div id="map"></div>
       </section>
    </div>
+
+<?php include 'components/customer-rev.php'; ?>
 
 <script>
    
