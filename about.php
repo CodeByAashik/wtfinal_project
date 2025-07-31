@@ -166,7 +166,7 @@
                <img src="images/pic-1.png" alt="">
             </div>
             <div class="member-info">
-               <h3>Chef Arjun Kumar</h3>
+               <h3>Chef Aashik Thakur</h3>
                <p>Head Chef & Culinary Director</p>
             </div>
          </div>
@@ -176,7 +176,7 @@
                <i class="fas fa-user-tie"></i>
             </div>
             <div class="member-info">
-               <h3>Priya Singh</h3>
+               <h3>Pushparanjan BK</h3>
                <p>Operations Manager</p>
             </div>
          </div>
@@ -186,7 +186,7 @@
                <i class="fas fa-shipping-fast"></i>
             </div>
             <div class="member-info">
-               <h3>Rahul Mehta</h3>
+               <h3>Dipansu Rauniyar</h3>
                <p>Delivery Operations Supervisor</p>
             </div>
          </div>
