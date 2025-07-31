@@ -47,7 +47,7 @@
          position: relative;
          z-index: 2;
          transition: all 0.3s ease;
-         overflow: hidden;
+         overflow: hidden
       }
       
       .quick-view .box:hover {

@@ -30,7 +30,9 @@
       .hero {
          position: relative;
          height: 100vh;
-         background: linear-gradient(135deg, rgba(255,107,53,0.9) 0%, rgba(247,147,30,0.9) 100%);
+         background: url('../images/food-1024x683.jpg');
+         background-repeat: no-repeat;
+         background-size: cover;
          display: flex;
          align-items: center;
          justify-content: center;

@@ -16,7 +16,7 @@
 <body>
 
 <!-- Hero Section -->
-<section class="hero">
+<section class="hero" style="">
    <div class="floating-element">
       <div class="floating-icon">
          <i class="fas fa-pizza-slice"></i>
@@ -79,7 +79,7 @@
             <span class="stat-label">Average Delivery</span>
          </div>
          <div class="stat-item">
-            <span class="stat-number">4.8★</span>
+            <span class="stat-number">5</span>
             <span class="stat-label">Customer Rating</span>
          </div>
       </div>
