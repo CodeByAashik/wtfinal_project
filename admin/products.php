@@ -18,6 +18,8 @@ if(isset($_POST['add_product'])){
    $price = filter_var($price, FILTER_SANITIZE_STRING);
    $category = $_POST['category'];
    $category = filter_var($category, FILTER_SANITIZE_STRING);
+   $sd = $_POST['sd'];
+   $sd = filter_var($sd, FILTER_SANITIZE_STRING);
 
    $image = $_FILES['image']['name'];
    $image = filter_var($image, FILTER_SANITIZE_STRING);
@@ -36,8 +38,8 @@ if(isset($_POST['add_product'])){
       }else{
          move_uploaded_file($image_tmp_name, $image_folder);
 
-         $insert_product = $conn->prepare("INSERT INTO `products`(name, category, price, image) VALUES(?,?,?,?)");
-         $insert_product->execute([$name, $category, $price, $image]);
+         $insert_product = $conn->prepare("INSERT INTO `products`(name, category, price, image,sd) VALUES(?,?,?,?,?)");
+         $insert_product->execute([$name, $category, $price, $image,$sd]);
 
          $message[] = 'new product added!';
       }
@@ -91,6 +93,7 @@ if(isset($_GET['delete'])){
       <h3>add product</h3>
       <input type="text" required placeholder="enter product name" name="name" maxlength="100" class="box">
       <input type="number" min="0" max="9999999999" required placeholder="enter product price" name="price" onkeypress="if(this.value.length == 10) return false;" class="box">
+      <textarea class="box" name="sd" id="sdsc" placeholder="Describe dish" required rows="7" ></textarea>
       <select name="category" class="box" required>
          <option value="" disabled selected>select category --</option>
          <option value="main dish">main dish</option>

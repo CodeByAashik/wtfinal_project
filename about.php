@@ -16,7 +16,7 @@
 <body>
 
 <!-- Hero Section -->
-<section class="hero" style="">
+<section class="hero">
    <div class="floating-element">
       <div class="floating-icon">
          <i class="fas fa-pizza-slice"></i>

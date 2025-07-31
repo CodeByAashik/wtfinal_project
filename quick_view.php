@@ -47,14 +47,22 @@ include 'components/add_cart.php';
          <input type="hidden" name="name" value="<?= $fetch_products['name']; ?>">
          <input type="hidden" name="price" value="<?= $fetch_products['price']; ?>">
          <input type="hidden" name="image" value="<?= $fetch_products['image']; ?>">
+         <input type="hidden" name="sd" value="<? $fetch_products['sd']; ?>">
          <img src="uploaded_img/<?= $fetch_products['image']; ?>" alt="">
-         <a href="category.php?category=<?= $fetch_products['category']; ?>" class="cat"><?= $fetch_products['category']; ?></a>
-         <div class="name"><?= $fetch_products['name']; ?></div>
-         <div class="flex">
-            <div class="price"><span>$</span><?= $fetch_products['price']; ?></div>
-            <input type="number" name="qty" class="qty" min="1" max="99" value="1" maxlength="2">
+         <div class="rightbox">
+            
+            <div class="cns">
+               <a href="category.php?category=<?= $fetch_products['category']; ?>" class="cat"><?= $fetch_products['category']; ?></a>
+               <div class="name"><?= $fetch_products['name']; ?></div>
+               <div class="short-desc"><?= $fetch_products['sd']; ?>This is a short description</div>
+            </div>
+            
+            <div class="flex">
+               <div class="price"><span>Rs. </span><?= $fetch_products['price']; ?></div>
+               <input type="number" name="qty" class="qty" min="1" max="99" value="1" maxlength="2">
+            </div>
+            <button type="submit" name="add_to_cart" class="cart-btn">add to cart</button>
          </div>
-         <button type="submit" name="add_to_cart" class="cart-btn">add to cart</button>
       </form>
       <?php
             }
