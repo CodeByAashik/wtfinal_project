@@ -16,8 +16,7 @@ if(isset($_POST['update_payment'])){
    $payment_status = $_POST['payment_status'];
    $update_status = $conn->prepare("UPDATE `orders` SET payment_status = ? WHERE id = ?");
    $update_status->execute([$payment_status, $order_id]);
-   $message[] = 'payment status updated!';
-
+   $message[] = 'Payment status updated successfully!';
 }
 
 if(isset($_GET['delete'])){
@@ -41,75 +40,64 @@ if(isset($_GET['delete'])){
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
-   <!-- custom css file link  -->
+   <!-- custom css files -->
    <link rel="stylesheet" href="../css/admin_style.css">
    <link rel="stylesheet" href="../css/admin-orders.css">
-
+   <link rel="stylesheet" href="../css/admin-header.css">
 </head>
-<body style="background-image: url('images/food-1024x683.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+<body style="background-image: url('images/food-1024x683.jpg'); background-size: cover; height:100vh; background-position: center; background-repeat: no-repeat;">
 
 <?php include '../components/admin_header.php' ?>
 
-<!-- placed orders section starts  -->
+<section class="orders-panel">
+   <h1 class="panel-heading">Placed Orders</h1>
 
-<section class="placed-orders">
-
-   <h1 class="heading"><span>placed orders</span> </h1>
-
-   <div class="box-container">
-
-   <?php
-      $select_orders = $conn->prepare("SELECT * FROM `orders`");
-      $select_orders->execute();
-      if($select_orders->rowCount() > 0){
-         while($fetch_orders = $select_orders->fetch(PDO::FETCH_ASSOC)){
-   ?>
-   <div class="box">
-      <p> user id : <span><?= $fetch_orders['user_id']; ?></span> </p>
-      <p> placed on : <span><?= $fetch_orders['placed_on']; ?></span> </p>
-      <p> name : <span><?= $fetch_orders['name']; ?></span> </p>
-      <p> email : <span><?= $fetch_orders['email']; ?></span> </p>
-      <p> number : <span><?= $fetch_orders['number']; ?></span> </p>
-      <p> address : <span><?= $fetch_orders['address']; ?></span> </p>
-      <p> total products : <span><?= $fetch_orders['total_products']; ?></span> </p>
-      <p> total price : <span>Rs.<?= $fetch_orders['total_price']; ?>/-</span> </p>
-      <p> payment method : <span><?= $fetch_orders['method']; ?></span> </p>
-      <form action="" method="POST">
-         <input type="hidden" name="order_id" value="<?= $fetch_orders['id']; ?>">
-         <select name="payment_status" class="drop-down">
-            <option value="" selected disabled><?= $fetch_orders['payment_status']; ?></option>
-            <option value="pending">pending</option>
-            <option value="completed">completed</option>
-         </select>
-         <div class="flex-btn">
-            <input type="submit" value="update" class="btn" name="update_payment">
-            <a href="placed_orders.php?delete=<?= $fetch_orders['id']; ?>" class="delete-btn" onclick="return confirm('delete this order?');">delete</a>
+   <div class="orders-wrapper">
+      <?php
+         $select_orders = $conn->prepare("SELECT * FROM `orders` ORDER BY id DESC");
+         $select_orders->execute();
+         if($select_orders->rowCount() > 0){
+            while($fetch_orders = $select_orders->fetch(PDO::FETCH_ASSOC)){
+      ?>
+      <div class="order-box">
+         <div class="order-details">
+            <p><span>User ID:</span> <?= $fetch_orders['user_id']; ?></p>
+            <p><span>Placed On:</span> <?= $fetch_orders['placed_on']; ?></p>
+            <p><span>Name:</span> <?= $fetch_orders['name']; ?></p>
+            <p><span>Email:</span> <?= $fetch_orders['email']; ?></p>
+            <p><span>Phone:</span> <?= $fetch_orders['number']; ?></p>
+            <p><span>Address:</span> <?= $fetch_orders['address']; ?></p>
+            <p><span>Products:</span> <?= $fetch_orders['total_products']; ?></p>
+            <p><span>Total:</span> Rs.<?= $fetch_orders['total_price']; ?>/-</p>
+            <p><span>Payment Method:</span> <?= $fetch_orders['method']; ?></p>
          </div>
-      </form>
-   </div>
-   <?php
+
+         <form action="" method="POST" class="order-controls">
+            <input type="hidden" name="order_id" value="<?= $fetch_orders['id']; ?>">
+            <select name="payment_status" class="status-dropdown">
+               <option value="" selected disabled><?= $fetch_orders['payment_status']; ?></option>
+               <option value="pending">Pending</option>
+               <option value="completed">Completed</option>
+            </select>
+
+            <div class="order-buttons">
+               <input type="submit" value="Update" class="btn" name="update_payment">
+               <a href="placed_orders.php?delete=<?= $fetch_orders['id']; ?>" 
+                  class="delete-btn" 
+                  onclick="return confirm('Delete this order?');">Delete</a>
+            </div>
+         </form>
+      </div>
+      <?php
+         }
+      } else {
+         echo '<p class="empty">No orders have been placed yet!</p>';
       }
-   }else{
-      echo '<p class="empty">no orders placed yet!</p>';
-   }
-   ?>
-
+      ?>
    </div>
-
 </section>
 
-<!-- placed orders section ends -->
 
-
-
-
-
-
-
-
-
-<!-- custom js file link  -->
 <script src="../js/admin_script.js"></script>
-
 </body>
 </html>

@@ -33,9 +33,11 @@ if(isset($_GET['delete'])){
 
    <!-- custom css file link  -->
    <link rel="stylesheet" href="../css/admin_style.css">
+   <link rel="stylesheet" href="../css/admin-header.css">
+   <link rel="stylesheet" href="../css/admin-accounts.css"
 
 </head>
-<body style="background-image: url('images/2016_09_29_12990_1475116504._large.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+<body style="background-image: url('images/2016_09_29_12990_1475116504._large.jpg'); height:100vh; background-size: cover; background-position: center; background-repeat: no-repeat;">
 
 <?php include '../components/admin_header.php' ?>
 

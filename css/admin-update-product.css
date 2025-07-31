@@ -1,0 +1,105 @@
+.update-product {
+   max-width: 600px;
+   margin: 3rem auto;
+   padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.662);
+   backdrop-filter: blur(10px);
+   border-radius: 5rem;
+   border-radius: 12px;
+   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.update-product .heading {
+   text-align: center;
+   font-size: 2.8rem;
+   font-weight: 600;
+   margin-bottom: 2rem;
+   color: #34495e;
+   text-transform: capitalize;
+}
+
+.update-product form {
+   display: flex;
+   flex-direction: column;
+   gap: 1.5rem;
+}
+
+.update-product form img {
+   width: 100%;
+   height: auto;
+   max-height: 250px;
+   object-fit: cover;
+   border-radius: 10px;
+   margin-bottom: 1.5rem;
+   border: 2px solid #ddd;
+}
+
+.update-product form .form-label {
+   font-size: 1.6rem;
+   font-weight: 500;
+   color: #444;
+   text-align: left;
+}
+
+.update-product form .box {
+   padding: 1.2rem;
+   border: 1px solid #ccc;
+   border-radius: 8px;
+   font-size: 1.6rem;
+   background: #f9f9f9;
+   transition: all 0.3s ease;
+}
+
+.update-product form .box:focus {
+   border-color: #4834d4;
+   background: #fff;
+   box-shadow: 0 0 5px rgba(72, 52, 212, 0.2);
+}
+
+.update-product .flex-btn {
+   display: flex;
+   justify-content: space-between;
+   gap: 1rem;
+   margin-top: 1rem;
+}
+
+.update-product .btn,
+.update-product .option-btn {
+   flex: 1;
+   padding: 1.2rem;
+   font-size: 1.6rem;
+   border-radius: 8px;
+   cursor: pointer;
+   text-align: center;
+   color: #fff;
+   text-transform: capitalize;
+   transition: background 0.3s ease;
+}
+
+.update-product .btn {
+   background: #4834d4;
+}
+
+.update-product .btn:hover {
+   background: #2e2eb8;
+}
+
+.update-product .option-btn {
+   background: #f39c12;
+}
+
+.update-product .option-btn:hover {
+   background: #d68910;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+   .update-product {
+      margin: 2rem;
+      padding: 1.5rem;
+   }
+
+   .update-product .flex-btn {
+      flex-direction: column;
+   }
+}

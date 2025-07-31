@@ -2,7 +2,7 @@
 if(isset($message)){
    foreach($message as $message){
       echo '
-      <div class="message">
+      <div class="admin-message">
          <span>'.$message.'</span>
          <i class="fas fa-times" onclick="this.parentElement.remove();"></i>
       </div>
@@ -11,7 +11,7 @@ if(isset($message)){
 }
 ?>
 
-<header class="header">
+<header class="admin-header">
 
    <section class="flex">
 

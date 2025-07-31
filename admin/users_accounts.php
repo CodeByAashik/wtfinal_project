@@ -37,19 +37,21 @@ if(isset($_GET['delete'])){
 
    <!-- custom css file link  -->
    <link rel="stylesheet" href="../css/admin_style.css">
+   <link rel="stylesheet" href="../css/admin-user-acounts.css">
+   <link rel="stylesheet" href="../css/admin-header.css">
 
 </head>
-<body style="background-image: url('images/2016_09_29_12990_1475116504._large.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+<body style="background-image: url('images/2016_09_29_12990_1475116504._large.jpg'); height:100vh; background-size: cover; background-position: center; background-repeat: no-repeat;">
 
 <?php include '../components/admin_header.php' ?>
 
 <!-- user accounts section starts  -->
 
-<section class="accounts">
+<section class="admin-accounts">
 
-   <h1 class="heading">users account</h1>
+   <h1 class="admin-accounts__title">Users Accounts</h1>
 
-   <div class="box-container">
+   <div class="admin-accounts__grid">
 
    <?php
       $select_account = $conn->prepare("SELECT * FROM `users`");
@@ -57,19 +59,23 @@ if(isset($_GET['delete'])){
       if($select_account->rowCount() > 0){
          while($fetch_accounts = $select_account->fetch(PDO::FETCH_ASSOC)){  
    ?>
-   <div class="box">
-      <p> user id : <span><?= $fetch_accounts['id']; ?></span> </p>
-      <p> username : <span><?= $fetch_accounts['name']; ?></span> </p>
-      <a href="users_accounts.php?delete=<?= $fetch_accounts['id']; ?>" class="delete-btn" onclick="return confirm('delete this account?');">delete</a>
+   <div class="admin-accounts__card">
+      <p><strong>User ID:</strong> <span><?= $fetch_accounts['id']; ?></span></p>
+      <p><strong>Username:</strong> <span><?= $fetch_accounts['name']; ?></span></p>
+      <a href="users_accounts.php?delete=<?= $fetch_accounts['id']; ?>" 
+         class="admin-accounts__delete" 
+         onclick="return confirm('Delete this account?');">Delete</a>
    </div>
    <?php
+         }
+      }else{
+         echo '<p class="admin-accounts__empty">No accounts available</p>';
       }
-   }else{
-      echo '<p class="empty">no accounts available</p>';
-   }
    ?>
 
    </div>
+
+</section>
 
 </section>
 

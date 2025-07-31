@@ -197,7 +197,6 @@ $grand_total = 0;
       }
    });
 
-   // Add CSS for smooth transitions
    const style = document.createElement('style');
    style.textContent = `
       .box {

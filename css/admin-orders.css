@@ -1,124 +1,111 @@
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+.orders-panel {
+   padding: 2rem;
 }
 
-body {
-  color: #333;
+.orders-panel .panel-heading {
+   text-align: center;
+   font-size: 3.5rem;
+   font-weight: bolder;
+   margin-bottom: 2rem;
+   color: Black;
+   padding: 2rem 1rem;
+   background-color: rgba(255, 255, 255, 0.662);
+   backdrop-filter: blur(10px);
+   border-radius: 5rem;
 }
 
-/* Section Heading */
-.placed-orders .heading {
-  text-align: center;
-  font-size: 2.2rem;
-  font-weight: 600;
-  margin: 30px 0;
-  color: #fff;
-  text-transform: capitalize;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 10px 20px;
-  border-radius: 10px;
-  display: inline-block;
-  backdrop-filter: blur(4px);
+.orders-wrapper {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   gap: 2rem;
 }
 
-/* Orders container */
-.placed-orders .box-container {
-  max-width: 1200px;
-  margin: 20px auto;
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  padding: 10px;
+.order-box {
+  background-color: rgba(255, 255, 255, 0.662);
+   backdrop-filter: blur(10px);
+   border-radius: 5rem;
+   box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+   padding: 2rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Each order box */
-.placed-orders .box {
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+.order-box:hover {
+   transform: translateY(-5px);
+   box-shadow: 0 10px 28px rgba(0,0,0,0.12);
 }
 
-.placed-orders .box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+.order-details p {
+   font-size: 1.5rem;
+   color: #555;
+   margin: 0.4rem 0;
 }
 
-/* Order text details */
-.placed-orders .box p {
-  margin-bottom: 8px;
-  font-size: 1rem;
-  color: #444;
+.order-details p span {
+   font-weight: 600;
+   color: #333;
 }
 
-.placed-orders .box p span {
-  color: #ff6b35;
-  font-weight: 500;
+.order-controls {
+   margin-top: 1.5rem;
+   display: flex;
+   flex-direction: column;
+   gap: 1.2rem;
 }
 
-/* Drop-down styling */
-.placed-orders select.drop-down {
-  width: 100%;
-  padding: 8px 10px;
-  font-size: 1rem;
-  margin-top: 12px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background: #fff;
-  outline: none;
+.status-dropdown {
+   padding: 0.9rem 1rem;
+   font-size: 1.5rem;
+   border: 1px solid #ddd;
+   border-radius: 8px;
+   background: #f9f9f9;
+   color: #333;
+   cursor: pointer;
+   transition: border 0.3s ease;
 }
 
-/* Buttons container */
-.flex-btn {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 15px;
+.status-dropdown:focus {
+   border: 1px solid #666;
 }
 
-/* Button styles */
-.btn,
-.delete-btn {
-  display: inline-block;
-  padding: 8px 14px;
-  font-size: 1.5rem;
-  text-decoration: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  text-align: center;
+.order-buttons {
+   display: flex;
+   gap: 1rem;
 }
 
-.btn {
-  background: #ff6b35;
-  color: #fff;
-  border: none;
+.order-buttons .btn {
+   background: #28a745;
+   color: #fff;
+   font-size: 1.5rem;
+   padding: 0.8rem 2rem;
+   border-radius: 8px;
+   cursor: pointer;
+   transition: background 0.3s ease;
+   text-align: center;
 }
 
-.btn:hover {
-  background: #e55a27;
+.order-buttons .btn:hover {
+   background: #218838;
 }
 
-.delete-btn {
-  background: #f44336;
-  color: #fff;
+.order-buttons .delete-btn {
+   background: #e74c3c;
+   color: #fff;
+   font-size: 1.5rem;
+   padding: 0.8rem 2rem;
+   border-radius: 8px;
+   text-align: center;
+   transition: background 0.3s ease;
 }
 
-.delete-btn:hover {
-  background: #c0392b;
+.order-buttons .delete-btn:hover {
+   background: #c0392b;
 }
 
-/* Empty message */
 .empty {
-  text-align: center;
-  font-size: 1.2rem;
-  background: rgba(255, 255, 255, 0.8);
-  padding: 20px;
-  margin: 30px auto;
-  border-radius: 12px;
-  max-width: 400px;
+   text-align: center;
+   font-size: 1.8rem;
+   color: #777;
 }

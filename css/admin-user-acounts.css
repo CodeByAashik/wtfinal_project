@@ -1,0 +1,77 @@
+/* Admin Accounts Section - Orange & White Theme */
+.admin-accounts {
+  max-width: 1100px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 1.2rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.admin-accounts__title {
+  font-size: 2.4rem;
+  text-align: center;
+  color: #ff6b35;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.admin-accounts__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.admin-accounts__card {
+  background: #fff;
+  border-radius: 0.8rem;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.admin-accounts__card:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.admin-accounts__card p {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 0.8rem;
+}
+
+.admin-accounts__card span {
+  color: #555;
+}
+
+.admin-accounts__delete {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background: #ff6b35;
+  color: #fff;
+  font-size: 1.4rem;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  transition: background 0.3s ease;
+}
+
+.admin-accounts__delete:hover {
+  background: #e55a27;
+}
+
+.admin-accounts__empty {
+  text-align: center;
+  font-size: 1.6rem;
+  color: #777;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .admin-accounts__title {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,266 @@
+/* ===== Admin Header & Messages (same look as user header) ===== */
+
+/* Admin Panel Messages */
+.admin-message {
+   position: fixed;
+   top: 20px;
+   right: 20px;
+   background: linear-gradient(135deg, #ff6b35, #f7931e);
+   color: white;
+   padding: 15px 20px;
+   border-radius: 10px;
+   box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+   z-index: 10000;
+   display: flex;
+   align-items: center;
+   gap: 15px;
+   font-weight: 500;
+   animation: slideInRight 0.4s ease-out;
+}
+
+.admin-message i {
+   cursor: pointer;
+   font-size: 16px;
+   opacity: 0.8;
+   transition: opacity 0.3s ease;
+}
+.admin-message i:hover {
+   opacity: 1;
+}
+
+/* Keyframes */
+@keyframes slideInRight {
+   from {
+      transform: translateX(100%);
+      opacity: 0;
+   }
+   to {
+      transform: translateX(0);
+      opacity: 1;
+   }
+}
+
+/* Header Container */
+.admin-header {
+   background: white;
+   box-shadow: 0 4px 20px rgba(255, 107, 53, 0.2);
+   position: sticky;
+   top: 0;
+   z-index: 1000;
+   backdrop-filter: blur(10px);
+}
+
+/* Flex Layout */
+.admin-header .flex {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 1rem 2rem;
+   max-width: 1200px;
+   margin: 0 auto;
+   position: relative;
+}
+
+/* Logo styling */
+.admin-header .logo {
+   display: flex;
+   align-items: center;
+   text-decoration: none;
+   font-weight: 700;
+   font-size: 2rem;
+   color: #ff6b35;
+}
+.admin-header .logo span {
+   color: #222;
+   margin-left: 5px;
+}
+
+/* Navigation */
+.admin-header .navbar {
+   display: flex;
+   gap: 10px;
+   align-items: center;
+}
+.admin-header .navbar a {
+   color: black;
+   text-decoration: none;
+   font-weight: 600;
+   font-size: 16px;
+   text-transform: capitalize;
+   padding: 10px 12px;
+   border-radius: 25px;
+   transition: all 0.3s ease;
+   position: relative;
+   overflow: hidden;
+}
+.admin-header .navbar a:hover {
+   background: rgba(255, 255, 255, 0.15);
+   transform: translateY(-2px);
+   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+   color: #FC8A06;
+}
+
+/* Icons */
+.admin-header .icons {
+   display: flex;
+   align-items: center;
+   gap: 1.5rem;
+}
+.admin-header .icons a,
+.admin-header .icons div {
+   color: black;
+   font-size: 20px;
+   cursor: pointer;
+   padding: 10px 12px;
+   border-radius: 50%;
+   background: rgba(255, 255, 255, 0.1);
+   transition: all 0.3s ease;
+   position: relative;
+   text-decoration: none;
+}
+.admin-header .icons a:hover,
+.admin-header .icons div:hover {
+   background: rgba(255, 255, 255, 0.2);
+   transform: translateY(-3px);
+   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+   color: #FC8A06;
+}
+
+/* Profile dropdown */
+.admin-header .profile {
+   position: absolute;
+   top: 100%;
+   right: 2rem;
+   background: white;
+   border-radius: 15px;
+   box-shadow: 0 15px 35px rgba(255, 107, 53, 0.2);
+   padding: 4rem;
+   min-width: 300px;
+   transform: translateY(10px);
+   opacity: 0;
+   visibility: hidden;
+   transition: all 0.3s ease;
+   border: 2px solid rgba(255, 107, 53, 0.1);
+}
+
+.admin-header .profile.active {
+   transform: translateY(0);
+   opacity: 1;
+   visibility: visible;
+}
+
+.admin-header .profile p {
+   color: #ff6b35;
+   font-size: 18px;
+   font-weight: bold;
+   margin-bottom: 1rem;
+   text-align: center;
+   text-transform: capitalize;
+}
+
+.admin-header .profile .flex-btn {
+   display: flex;
+   gap: 1rem;
+   margin-bottom: 1rem;
+}
+
+.admin-header .profile .btn,
+.admin-header .profile .option-btn {
+   background: linear-gradient(135deg, #ff6b35, #f7931e);
+   color: black;
+   padding: 10px 35px;
+   text-decoration: none;
+   border-radius: 25px;
+   font-weight: 600;
+   text-align: center;
+   flex: 1;
+   transition: all 0.3s ease;
+   text-transform: capitalize;
+}
+
+.admin-header .profile .btn:hover,
+.admin-header .profile .option-btn:hover {
+   transform: translateY(-2px);
+   box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3);
+}
+
+.admin-header .profile .delete-btn {
+   background: linear-gradient(135deg, #e74c3c, #c0392b);
+   color: white;
+   padding: 10px 20px;
+   text-decoration: none;
+   border-radius: 25px;
+   font-weight: 600;
+   text-align: center;
+   flex: 1;
+   transition: all 0.3s ease;
+   text-transform: capitalize;
+}
+.admin-header .profile .delete-btn:hover {
+   transform: translateY(-2px);
+   box-shadow: 0 8px 20px rgba(231, 76, 60, 0.3);
+}
+
+/* Responsive Menu */
+@media (max-width: 768px) {
+   .admin-header .flex {
+      padding: 1rem;
+   }
+   .admin-header .navbar {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: linear-gradient(135deg, #ff6b35, #f7931e);
+      flex-direction: column;
+      padding: 2rem;
+      gap: 1rem;
+      border-radius: 0 0 15px 15px;
+      box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+   }
+   .admin-header .navbar.active {
+      display: flex;
+   }
+   .admin-header .navbar a {
+      width: 100%;
+      text-align: center;
+      padding: 15px;
+   }
+   .admin-header .profile {
+      right: 1rem;
+      min-width: 280px;
+   }
+   .admin-header .icons {
+      gap: 1rem;
+   }
+   .admin-header .icons a,
+   .admin-header .icons div {
+      font-size: 18px;
+      padding: 10px;
+   }
+}
+
+@media (max-width: 480px) {
+   .admin-header .flex {
+      padding: 0.8rem;
+   }
+   .admin-header .logo img {
+      height: 40px;
+   }
+   .admin-header .profile {
+      min-width: 250px;
+      padding: 1.5rem;
+   }
+   .admin-header .profile .flex-btn {
+      flex-direction: column;
+   }
+   .admin-header .icons {
+      gap: 0.8rem;
+   }
+   .admin-header .icons a,
+   .admin-header .icons div {
+      font-size: 16px;
+      padding: 8px;
+   }
+}

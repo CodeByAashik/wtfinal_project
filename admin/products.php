@@ -79,6 +79,8 @@ if(isset($_GET['delete'])){
 
    <!-- custom css file link  -->
    <link rel="stylesheet" href="../css/admin_style.css">
+   <link rel="stylesheet" href="../css/admin-header.css">
+   <link rel="stylesheet" href="../css/admin-products.css">
 
 </head>
 <body style="background-image: url('images/food-1024x683.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
@@ -87,22 +89,22 @@ if(isset($_GET['delete'])){
 
 <!-- add products section starts  -->
 
-<section class="add-products">
+<section class="product-panel">
 
-   <form action="" method="POST" enctype="multipart/form-data">
-      <h3>add product</h3>
-      <input type="text" required placeholder="enter product name" name="name" maxlength="100" class="box">
-      <input type="number" min="0" max="9999999999" required placeholder="enter product price" name="price" onkeypress="if(this.value.length == 10) return false;" class="box">
-      <textarea class="box" name="sd" id="sdsc" placeholder="Describe dish" required rows="7" ></textarea>
-      <select name="category" class="box" required>
-         <option value="" disabled selected>select category --</option>
-         <option value="main dish">main dish</option>
-         <option value="fast food">fast food</option>
-         <option value="drinks">drinks</option>
-         <option value="desserts">desserts</option>
+   <form action="" method="POST" enctype="multipart/form-data" class="product-form">
+      <h3 class="panel-heading">Add Product</h3>
+      <input type="text" required placeholder="Enter product name" name="name" maxlength="100" class="input-box">
+      <input type="number" min="0" max="9999999999" required placeholder="Enter product price" name="price" onkeypress="if(this.value.length == 10) return false;" class="input-box">
+      <textarea class="input-box" name="sd" id="sdsc" placeholder="Describe dish" required rows="7"></textarea>
+      <select name="category" class="input-box" required>
+         <option value="" disabled selected>Select category --</option>
+         <option value="main dish">Main dish</option>
+         <option value="fast food">Fast food</option>
+         <option value="drinks">Drinks</option>
+         <option value="desserts">Desserts</option>
       </select>
-      <input type="file" name="image" class="box" accept="image/jpg, image/jpeg, image/png, image/webp" required>
-      <input type="submit" value="add product" name="add_product" class="btn">
+      <input type="file" name="image" class="input-box" accept="image/jpg, image/jpeg, image/png, image/webp" required>
+      <input type="submit" value="Add Product" name="add_product" class="btn">
    </form>
 
 </section>
@@ -111,38 +113,39 @@ if(isset($_GET['delete'])){
 
 <!-- show products section starts  -->
 
-<section class="show-products" style="padding-top: 0;">
+<section class="products-display" style="padding-top: 0;">
 
-   <div class="box-container">
+   <div class="products-grid">
 
    <?php
-      $show_products = $conn->prepare("SELECT * FROM `products`");
+      $show_products = $conn->prepare("SELECT * FROM `products` ORDER BY id DESC");
       $show_products->execute();
       if($show_products->rowCount() > 0){
          while($fetch_products = $show_products->fetch(PDO::FETCH_ASSOC)){  
    ?>
-   <div class="box">
+   <div class="product-card">
       <img src="../uploaded_img/<?= $fetch_products['image']; ?>" alt="">
-      <div class="flex">
-         <div class="price"><span>Rs. </span><?= $fetch_products['price']; ?><span>/-</span></div>
-         <div class="category"><?= $fetch_products['category']; ?></div>
+      <div class="product-info">
+         <div class="product-price"><span>Rs. </span><?= $fetch_products['price']; ?><span>/-</span></div>
+         <div class="product-category"><?= $fetch_products['category']; ?></div>
       </div>
-      <div class="name"><?= $fetch_products['name']; ?></div>
-      <div class="flex-btn">
-         <a href="update_product.php?update=<?= $fetch_products['id']; ?>" class="option-btn">update</a>
-         <a href="products.php?delete=<?= $fetch_products['id']; ?>" class="delete-btn" onclick="return confirm('delete this product?');">delete</a>
+      <div class="product-name"><?= $fetch_products['name']; ?></div>
+      <div class="product-actions">
+         <a href="update_product.php?update=<?= $fetch_products['id']; ?>" class="option-btn">Update</a>
+         <a href="products.php?delete=<?= $fetch_products['id']; ?>" class="delete-btn" onclick="return confirm('Delete this product?');">Delete</a>
       </div>
    </div>
    <?php
          }
       }else{
-         echo '<p class="empty">no products added yet!</p>';
+         echo '<p class="empty">No products added yet!</p>';
       }
    ?>
 
    </div>
 
 </section>
+
 
 <!-- show products section ends -->
 

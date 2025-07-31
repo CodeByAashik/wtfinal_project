@@ -1,0 +1,101 @@
+/* Admin Accounts Page */
+
+.accounts {
+   max-width: 1200px;
+   margin: 2rem auto;
+   padding: 2rem;
+}
+
+.accounts .heading {
+   text-align: center;
+   font-size: 3rem;
+   font-weight: 600;
+   color: #34495e;
+   margin-bottom: 2rem;
+   text-transform: capitalize;
+}
+
+.accounts .box-container {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   gap: 2rem;
+}
+
+.accounts .box {
+   background: rgba(255, 255, 255, 0.95);
+   border-radius: 12px;
+   padding: 2rem;
+   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+   border: 1px solid #ddd;
+   text-align: center;
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.accounts .box:hover {
+   transform: translateY(-4px);
+   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.accounts .box p {
+   font-size: 1.8rem;
+   color: #555;
+   margin-bottom: 1rem;
+}
+
+.accounts .box p span {
+   color: #4834d4;
+   font-weight: 600;
+}
+
+.accounts .flex-btn {
+   display: flex;
+   justify-content: center;
+   gap: 1rem;
+   margin-top: 1rem;
+}
+
+.accounts .delete-btn,
+.accounts .option-btn {
+   flex: 1;
+   padding: 1rem;
+   font-size: 1.6rem;
+   border-radius: 8px;
+   cursor: pointer;
+   color: #fff;
+   text-align: center;
+   transition: background 0.3s ease;
+}
+
+.accounts .delete-btn {
+   background: #e74c3c;
+}
+
+.accounts .delete-btn:hover {
+   background: #c0392b;
+}
+
+.accounts .option-btn {
+   background: #f39c12;
+}
+
+.accounts .option-btn:hover {
+   background: #d68910;
+}
+
+.accounts .box a.option-btn:first-of-type {
+   background: #4834d4;
+}
+
+.accounts .box a.option-btn:first-of-type:hover {
+   background: #2e2eb8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+   .accounts {
+      padding: 1.5rem;
+   }
+   .accounts .flex-btn {
+      flex-direction: column;
+   }
+}
