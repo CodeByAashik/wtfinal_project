@@ -163,7 +163,7 @@
       <div class="team-grid">
          <div class="team-member">
             <div class="member-image">
-               <img src="images/pic-1.png" alt="">
+               <i class="fas fa-user-tie"></i>
             </div>
             <div class="member-info">
                <h3>Chef Aashik Thakur</h3>
