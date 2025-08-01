@@ -53,7 +53,7 @@ $grand_total = 0;
    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
    <!-- custom css file link  -->
-   <!-- <link rel="stylesheet" href="css/style.css"> -->
+   <link rel="stylesheet" href="css/style.css">
    <link rel="stylesheet" href="css/footer.css">
    <link rel="stylesheet" href="css/header.css">
    <link rel="stylesheet" href="css/cart.css">
