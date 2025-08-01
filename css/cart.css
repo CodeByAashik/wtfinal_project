@@ -30,7 +30,7 @@
 
       /* Heading Section */
       .heading {
-         background: var(--gradient);
+         background: var(--text-dark);
          color: var(--white);
          padding: 3rem 0;
          text-align: center;

@@ -191,7 +191,10 @@ section{
    .flex-btn{
       flex-flow: column;
       gap:0;
-   }   
+   } 
+   .loc-container{
+      display: none;
+   }  
 
 }
 
