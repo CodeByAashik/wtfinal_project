@@ -59,7 +59,7 @@ if(isset($_POST['submit'])){
 
 <section class="form-container" style="background-color: white;">
    <div class="left">
-      <img src="images/food-1024x683.jpg" class="login-img" alt="">
+      <img src="images/login.jpg" class="login-img" alt="">
    </div>
    <form action="" method="post">
       <h3>login now</h3>
