@@ -104,12 +104,7 @@ section{
    color:var(--yellow);
 }
 
-
-
-
-
-/* media queries  */
-
+/* responsive media queries  */
 @media (max-width:991px) {
    
    html{
